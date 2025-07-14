@@ -186,3 +186,26 @@ label[for="field-disability"] {
   margin-bottom: 16px !important;
 }
 
+/* --- Comeet Compliance Fields Styling --- */
+label[for*="gender"],
+label[for*="race"],
+label[for*="veteran"],
+label[for*="disability"] {
+  color: #85E34A !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  margin-top: 24px !important;
+  display: block !important;
+}
+
+label[for*="veteran"] + .field-description,
+label[for*="disability"] + .field-description {
+  color: #D0F0A7 !important;
+  background: rgba(133, 227, 74, 0.05) !important;
+  padding: 12px 16px !important;
+  border-left: 4px solid #85E34A !important;
+  border-radius: 4px !important;
+  margin: 16px 0 !important;
+}
+
+
