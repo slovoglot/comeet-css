@@ -1,123 +1,187 @@
-/* === ARRIVEAI CUSTOM COMEET WIDGET STYLING === */
-
-/* General */
+/* Base form styling */
 body, .comeet-form {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  color: #EAEAEA;
   font-family: 'Satoshi', sans-serif !important;
-  font-size: 18px;
+  background-color: #0F0F0F !important;
+  color: #EAEAEA !important;
+  margin: 0;
+  padding: 0;
 }
 
-/* Headings and Section Titles */
-h2, .control-label, legend, .shareTitle {
+/* Headings, legends, and main labels */
+h2, legend, .control-label {
   font-family: 'Gilroy', sans-serif !important;
-  font-weight: 600;
   color: #85E34A !important;
   font-size: 28px !important;
+  font-weight: 600 !important;
   margin-bottom: 16px;
 }
 
-/* Paragraphs & Helper Text */
-p, .form-group, label, .help-block {
+/* Paragraphs and helper text (descriptions below fields) */
+p, label, .form-group, .help-block, .field-description {
   color: #FFFFFF !important;
   font-size: 18px !important;
-  line-height: 1.5;
+  line-height: 1.5 !important;
+  margin-bottom: 12px !important;
+  font-weight: 400 !important;
 }
 
-/* Input Fields */
+/* Mark mandatory fields with asterisk */
+label.required:after {
+  content: " *";
+  color: #FF5252 !important;
+  font-weight: 700;
+}
+
+/* Inputs, selects, textareas */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="url"],
 textarea,
 select {
-  background-color: #1A1A1A !important;
-  color: #FFFFFF !important;
+  background-color: #121212 !important;
   border: 1px solid #85E34A !important;
-  border-radius: 8px;
-  padding: 12px 16px;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 16px;
-  transition: 0.3s ease border-color, 0.3s ease background-color;
+  color: #FFFFFF !important;
+  border-radius: 6px !important;
+  padding: 12px 14px !important;
+  font-size: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.3s ease !important;
 }
 
-input:focus, textarea:focus, select:focus {
-  outline: none;
+/* Focus states for inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
   border-color: #A1E75A !important;
   box-shadow: 0 0 6px #A1E75A !important;
-  background-color: #262626;
+  background-color: #1a1a1a !important;
 }
 
-/* Checkbox/Radio */
+/* Checkbox and radio label styles */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   color: #EAEAEA !important;
-  font-size: 16px;
+  font-size: 16px !important;
+  cursor: pointer;
+  margin-left: 6px !important;
 }
 
-/* Submit Button */
+/* Submit button */
 .submit-button {
   background-color: #489C18 !important;
   color: #FFFFFF !important;
-  border: none;
-  border-radius: 8px;
-  padding: 16px 24px;
-  font-size: 18px;
-  font-weight: 600;
-  width: 100%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 24px;
-  font-family: 'Gilroy', sans-serif;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  padding: 14px 28px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+  margin-top: 24px !important;
+  display: inline-block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  user-select: none !important;
 }
 
-.submit-button:hover {
+.submit-button:hover,
+.submit-button:focus {
   background-color: #367613 !important;
+  outline: none !important;
 }
 
-/* Error Messages */
+/* Error messages and field errors */
 .error-message, .field-error {
   color: #FF5252 !important;
-  font-size: 14px;
-  margin-top: 6px;
+  font-size: 14px !important;
+  margin-top: 6px !important;
 }
 
-/* Thank You */
+/* Success / thank you message */
 .thankyou-message {
-  color: #85E34A;
-  font-family: 'Gilroy', sans-serif;
-  font-size: 22px;
-  text-align: center;
-  margin: 40px 0;
+  font-family: 'Gilroy', sans-serif !important;
+  color: #85E34A !important;
+  font-size: 22px !important;
+  text-align: center !important;
+  margin: 40px 0 !important;
 }
 
-/* Map Styling */
-iframe {
-  border-radius: 24px;
-  border: 1px solid #2E7D32;
-  overflow: hidden;
+/* Custom large text blocks for info sections */
+.info-section {
+  background: rgba(133, 227, 74, 0.1) !important;
+  border-left: 4px solid #85E34A !important;
+  padding: 16px 20px !important;
+  margin: 20px 0 !important;
+  font-size: 16px !important;
+  color: #D0F0A7 !important;
+  font-family: 'Satoshi', sans-serif !important;
+  line-height: 1.5 !important;
 }
 
-/* Section Dividers (Optional) */
-section {
-  margin-bottom: 40px;
+/* Styling for dropdown selects with placeholders */
+select option[value=""][disabled] {
+  color: #888 !important;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 600px) {
-  h2, .control-label {
+  h2, legend, .control-label {
     font-size: 24px !important;
   }
-
-  p, label, .form-group {
-    font-size: 16px;
+  p, label, .form-group, .help-block {
+    font-size: 16px !important;
   }
-
   .submit-button {
-    font-size: 16px;
-    padding: 14px 20px;
+    font-size: 16px !important;
+    padding: 12px 20px !important;
   }
+}
+
+/* Specific field label customizations if needed */
+label[for="field-first-name"],
+label[for="field-last-name"],
+label[for="field-email"],
+label[for="field-phone"],
+label[for="field-resume"],
+label[for="field-linkedin"],
+label[for="field-website"],
+label[for="field-coverletter"],
+label[for="field-portfolio"],
+label[for="field-personalnote"],
+label[for="field-how-did-you-find"],
+label[for="field-us-citizen"],
+label[for="field-availability"],
+label[for="field-salary"],
+label[for="field-gender"],
+label[for="field-race"],
+label[for="field-veteran-status"],
+label[for="field-disability"] {
+  font-weight: 600 !important;
+  color: #85E34A !important;
+}
+
+/* Style field descriptions (small text under fields) */
+.field-description {
+  font-size: 14px !important;
+  font-style: italic !important;
+  color: #B4B4B4 !important;
+  margin-top: 4px !important;
+}
+
+/* Highlight mandatory form section titles */
+.section-title {
+  font-family: 'Gilroy', sans-serif !important;
+  font-size: 22px !important;
+  color: #85E34A !important;
+  font-weight: 600 !important;
+  margin-top: 40px !important;
+  margin-bottom: 16px !important;
 }
 
