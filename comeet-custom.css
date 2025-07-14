@@ -17,9 +17,19 @@ h2, .control-label, legend {
 
 /* Paragraphs and helper text */
 p, .form-group, label, .help-block {
-  color: #FFFFFF !important;
+  color: #EAEAEA !important;
   font-size: 18px !important;
-  line-height: 1.4;
+  line-height: 1.6 !important;
+  margin: 16px 0 !important;
+}
+
+/* Customize all standalone <p> tags */
+p {
+  font-family: 'Satoshi', sans-serif !important;
+  color: #EAEAEA !important;
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  margin: 16px 0 !important;
 }
 
 /* Inputs, selects, textareas */
@@ -114,4 +124,5 @@ input[type="radio"] + label {
     padding: 12px 20px !important;
   }
 }
+
 
