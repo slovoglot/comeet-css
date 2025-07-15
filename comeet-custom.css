@@ -1,4 +1,3 @@
-/* comeet-custom.css */
 /* Base form styling */
 body, .comeet-form {
   font-family: 'Satoshi', sans-serif !important;
@@ -17,7 +16,7 @@ h2, legend, .control-label {
   margin-bottom: 16px;
 }
 
-/* Paragraphs and helper text (descriptions below fields) */
+/* Paragraphs and helper text */
 p, label, .form-group, .help-block, .field-description {
   color: #FFFFFF !important;
   font-size: 18px !important;
@@ -26,7 +25,7 @@ p, label, .form-group, .help-block, .field-description {
   font-weight: 400 !important;
 }
 
-/* Mark mandatory fields with asterisk */
+/* Mark mandatory fields */
 label.required:after {
   content: " *";
   color: #FF5252 !important;
@@ -51,23 +50,20 @@ select {
   transition: border-color 0.3s ease !important;
 }
 
-/* Focus states for inputs */
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
+/* Focus states */
+input:focus,
 textarea:focus,
 select:focus {
   outline: none !important;
-  border-color: #A1E75A !important;
-  box-shadow: 0 0 6px #A1E75A !important;
+  border-color: #9DDE6E !important;
+  box-shadow: 0 0 6px #9DDE6E !important;
   background-color: #1a1a1a !important;
 }
 
-/* Checkbox and radio label styles */
+/* Checkbox and radio */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-  color: #EAEAEA !important;
+  color: #FFFFFF !important;
   font-size: 16px !important;
   cursor: pointer;
   margin-left: 6px !important;
@@ -94,18 +90,18 @@ input[type="radio"] + label {
 
 .submit-button:hover,
 .submit-button:focus {
-  background-color: #367613 !important;
+  background-color: #326810 !important; /* Green 800 */
   outline: none !important;
 }
 
-/* Error messages and field errors */
+/* Error messages */
 .error-message, .field-error {
   color: #FF5252 !important;
   font-size: 14px !important;
   margin-top: 6px !important;
 }
 
-/* Success / thank you message */
+/* Thank you message */
 .thankyou-message {
   font-family: 'Gilroy', sans-serif !important;
   color: #85E34A !important;
@@ -114,7 +110,7 @@ input[type="radio"] + label {
   margin: 40px 0 !important;
 }
 
-/* Custom large text blocks for info sections */
+/* Info sections */
 .info-section {
   background: rgba(133, 227, 74, 0.1) !important;
   border-left: 4px solid #85E34A !important;
@@ -126,12 +122,12 @@ input[type="radio"] + label {
   line-height: 1.5 !important;
 }
 
-/* Styling for dropdown selects with placeholders */
+/* Placeholder option in selects */
 select option[value=""][disabled] {
   color: #888 !important;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 600px) {
   h2, legend, .control-label {
     font-size: 24px !important;
@@ -145,30 +141,13 @@ select option[value=""][disabled] {
   }
 }
 
-/* Specific field label customizations */
-label[for="field-first-name"],
-label[for="field-last-name"],
-label[for="field-email"],
-label[for="field-phone"],
-label[for="field-resume"],
-label[for="field-linkedin"],
-label[for="field-website"],
-label[for="field-coverletter"],
-label[for="field-portfolio"],
-label[for="field-personalnote"],
-label[for="field-how-did-you-find"],
-label[for="field-us-citizen"],
-label[for="field-availability"],
-label[for="field-salary"],
-label[for="field-gender"],
-label[for="field-race"],
-label[for="field-veteran-status"],
-label[for="field-disability"] {
+/* Field labels */
+label[for^="field-"] {
   font-weight: 600 !important;
   color: #85E34A !important;
 }
 
-/* Style field descriptions (small text under fields) */
+/* Descriptions */
 .field-description {
   font-size: 14px !important;
   font-style: italic !important;
@@ -176,7 +155,7 @@ label[for="field-disability"] {
   margin-top: 4px !important;
 }
 
-/* Highlight mandatory form section titles */
+/* Section titles */
 .section-title {
   font-family: 'Gilroy', sans-serif !important;
   font-size: 22px !important;
@@ -186,7 +165,7 @@ label[for="field-disability"] {
   margin-bottom: 16px !important;
 }
 
-/* --- Comeet Compliance Fields Styling --- */
+/* Compliance labels */
 label[for*="gender"],
 label[for*="race"],
 label[for*="veteran"],
@@ -198,6 +177,7 @@ label[for*="disability"] {
   display: block !important;
 }
 
+/* Compliance field descriptions */
 label[for*="veteran"] + .field-description,
 label[for*="disability"] + .field-description {
   color: #D0F0A7 !important;
@@ -207,5 +187,6 @@ label[for*="disability"] + .field-description {
   border-radius: 4px !important;
   margin: 16px 0 !important;
 }
+
 
 
