@@ -1,16 +1,22 @@
-/* Base form styling */
+/* ============================
+   ArriveAI Comeet Custom CSS
+   Theme: Green / Black / White
+   ============================ */
+
+/* Global base */
 body, .comeet-form {
   font-family: 'Satoshi', sans-serif !important;
-  background-color: #0F0F0F !important;
+  background-color: #0F0F0F !important; /* background-color */
   color: #FFFFFF !important;
+  font-size: 16px !important; /* font-size */
   margin: 0;
   padding: 0;
 }
 
-/* Headings, legends, and main labels */
+/* Headings, legends, labels */
 h2, legend, .control-label {
   font-family: 'Gilroy', sans-serif !important;
-  color: #85E34A !important;
+  color: #85E34A !important; /* color */
   font-size: 28px !important;
   font-weight: 600 !important;
   margin-bottom: 16px;
@@ -19,20 +25,19 @@ h2, legend, .control-label {
 /* Paragraphs and helper text */
 p, label, .form-group, .help-block, .field-description {
   color: #FFFFFF !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   line-height: 1.5 !important;
   margin-bottom: 12px !important;
-  font-weight: 400 !important;
 }
 
-/* Mark mandatory fields */
+/* Required asterisk */
 label.required:after {
   content: " *";
   color: #FF5252 !important;
   font-weight: 700;
 }
 
-/* Inputs, selects, textareas */
+/* Input fields */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -42,148 +47,82 @@ select {
   background-color: #121212 !important;
   border: 1px solid #85E34A !important;
   color: #FFFFFF !important;
-  border-radius: 6px !important;
-  padding: 12px 14px !important;
-  font-size: 16px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  transition: border-color 0.3s ease !important;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
-/* Focus states */
+/* Focus state */
 input:focus,
 textarea:focus,
 select:focus {
-  outline: none !important;
+  outline: none;
   border-color: #9DDE6E !important;
-  box-shadow: 0 0 6px #9DDE6E !important;
-  background-color: #1a1a1a !important;
-}
-
-/* Checkbox and radio */
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-  color: #FFFFFF !important;
-  font-size: 16px !important;
-  cursor: pointer;
-  margin-left: 6px !important;
+  box-shadow: 0 0 6px #9DDE6E;
+  background-color: #1a1a1a;
 }
 
 /* Submit button */
 .submit-button {
-  background-color: #489C18 !important;
+  background-color: #489C18 !important; /* button-color */
   color: #FFFFFF !important;
-  border: none !important;
-  border-radius: 6px !important;
-  font-size: 18px !important;
-  font-weight: 600 !important;
-  padding: 14px 28px !important;
-  cursor: pointer !important;
-  transition: background-color 0.3s ease !important;
-  margin-top: 24px !important;
-  display: inline-block !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  text-align: center !important;
-  user-select: none !important;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px !important; /* button-font-size */
+  font-weight: 600;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 24px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  user-select: none;
 }
 
 .submit-button:hover,
 .submit-button:focus {
-  background-color: #326810 !important; /* Green 800 */
-  outline: none !important;
+  background-color: #326810 !important;
+  outline: none;
 }
 
-/* Error messages */
-.error-message, .field-error {
+/* Error and success messages */
+.error-message,
+.field-error {
   color: #FF5252 !important;
-  font-size: 14px !important;
-  margin-top: 6px !important;
+  font-size: 14px;
+  margin-top: 6px;
 }
 
-/* Thank you message */
 .thankyou-message {
-  font-family: 'Gilroy', sans-serif !important;
+  font-family: 'Gilroy', sans-serif;
   color: #85E34A !important;
-  font-size: 22px !important;
-  text-align: center !important;
-  margin: 40px 0 !important;
+  font-size: 22px;
+  text-align: center;
+  margin: 40px 0;
 }
 
-/* Info sections */
-.info-section {
-  background: rgba(133, 227, 74, 0.1) !important;
-  border-left: 4px solid #85E34A !important;
-  padding: 16px 20px !important;
-  margin: 20px 0 !important;
-  font-size: 16px !important;
-  color: #D0F0A7 !important;
-  font-family: 'Satoshi', sans-serif !important;
-  line-height: 1.5 !important;
-}
-
-/* Placeholder option in selects */
+/* Dropdown placeholders */
 select option[value=""][disabled] {
-  color: #888 !important;
+  color: #888;
+}
+
+/* Labels layout (for labels-position = top) */
+label {
+  display: block !important;
+  margin-bottom: 6px;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
   h2, legend, .control-label {
-    font-size: 24px !important;
-  }
-  p, label, .form-group, .help-block {
-    font-size: 16px !important;
+    font-size: 24px;
   }
   .submit-button {
-    font-size: 16px !important;
-    padding: 12px 20px !important;
+    font-size: 16px;
+    padding: 12px 20px;
   }
-}
-
-/* Field labels */
-label[for^="field-"] {
-  font-weight: 600 !important;
-  color: #85E34A !important;
-}
-
-/* Descriptions */
-.field-description {
-  font-size: 14px !important;
-  font-style: italic !important;
-  color: #B4B4B4 !important;
-  margin-top: 4px !important;
-}
-
-/* Section titles */
-.section-title {
-  font-family: 'Gilroy', sans-serif !important;
-  font-size: 22px !important;
-  color: #85E34A !important;
-  font-weight: 600 !important;
-  margin-top: 40px !important;
-  margin-bottom: 16px !important;
-}
-
-/* Compliance labels */
-label[for*="gender"],
-label[for*="race"],
-label[for*="veteran"],
-label[for*="disability"] {
-  color: #85E34A !important;
-  font-weight: 600 !important;
-  font-size: 18px !important;
-  margin-top: 24px !important;
-  display: block !important;
-}
-
-/* Compliance field descriptions */
-label[for*="veteran"] + .field-description,
-label[for*="disability"] + .field-description {
-  color: #D0F0A7 !important;
-  background: rgba(133, 227, 74, 0.05) !important;
-  padding: 12px 16px !important;
-  border-left: 4px solid #85E34A !important;
-  border-radius: 4px !important;
-  margin: 16px 0 !important;
 }
