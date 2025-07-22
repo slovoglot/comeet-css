@@ -1,9 +1,9 @@
 /* ============================
-   ArriveAI Comeet Form Overrides
-   For Centered Apply Form Container
+   ArriveAI Comeet Custom CSS
+   Inputs & Button Left as Default
    ============================ */
 
-/* Global widget text settings */
+/* Global text and layout */
 .comeet-applyform {
   font-family: Arial, sans-serif !important;
   font-size: 14px !important;
@@ -21,7 +21,7 @@
   font-family: 'Gilroy', sans-serif !important;
   font-size: 28px !important;
   font-weight: 600 !important;
-  color: black !important;
+  color: #85E34A !important;
   margin-bottom: 16px !important;
 }
 
@@ -45,60 +45,11 @@
   font-weight: 700;
 }
 
-/* Input fields */
-.comeet-applyform input[type="text"],
-.comeet-applyform input[type="email"],
-.comeet-applyform input[type="tel"],
-.comeet-applyform input[type="url"],
-.comeet-applyform textarea,
-.comeet-applyform select {
-  background-color: #FFFFFF !important;
-  border: 1px solid #85E34A !important;
-  color: black !important;
-  border-radius: 6px;
-  padding: 12px 14px !important;
-  font-size: 14px !important;
-  line-height: 13px !important;
-  font-family: Arial, sans-serif !important;
-  font-weight: 400 !important;
-  width: 100%;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
-}
+/* DO NOT override input, textarea, select fields */
+/* Let Comeet handle field design natively */
 
-/* Focus state */
-.comeet-applyform input:focus,
-.comeet-applyform textarea:focus,
-.comeet-applyform select:focus {
-  outline: none;
-  border-color: #9DDE6E !important;
-  box-shadow: 0 0 6px #9DDE6E;
-  background-color: #1A1A1A !important;
-}
-
-/* Submit button */
-.comeet-applyform .submit-button {
-  background-color: #85E34A !important;
-  color: #FFFFFF !important;
-  border: none;
-  border-radius: 6px;
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  padding: 14px 28px !important;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 24px !important;
-  width: 100%;
-  text-align: center;
-  user-select: none;
-}
-
-/* Submit button hover */
-.comeet-applyform .submit-button:hover,
-.comeet-applyform .submit-button:focus {
-  background-color: #326810 !important;
-  outline: none;
-}
+/* DO NOT override the submit button */
+/* Leave "Apply Now at ArriveAI" button default */
 
 /* Error messages */
 .comeet-applyform .error-message,
@@ -140,9 +91,5 @@
   .comeet-applyform legend,
   .comeet-applyform .control-label {
     font-size: 24px !important;
-  }
-  .comeet-applyform .submit-button {
-    font-size: 14px !important;
-    padding: 12px 20px !important;
   }
 }
