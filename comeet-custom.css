@@ -1,72 +1,105 @@
-/* ============================
-   ArriveAI EEOC Questionnaire Left Alignment Only
-   ============================ */
+/* ============================================
+   ArriveAI Apply Form & Questionnaire Styling
+   Left-Aligned, Arial, #333333
+   ============================================ */
 
-/* EEOC questionnaire wrapper */
-.questionnaire {
+/* Base form typography */
+#applyForm, 
+#applyForm * {
+  font-family: Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #333333 !important;
+  text-align: left !important;
+  box-sizing: border-box;
+}
+
+/* Labels and field titles */
+#applyForm label,
+#applyForm .control-label,
+#applyForm .question-title,
+#applyForm .question-description,
+#applyForm .question-fineprint {
+  text-align: left !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #333333 !important;
+  font-weight: 400 !important;
+}
+
+/* Form fields: inputs, textareas, select (no visual override) */
+#applyForm input,
+#applyForm textarea,
+#applyForm select {
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #333333 !important;
+}
+
+/* Dropdown options */
+#applyForm .dropdown-menu,
+#applyForm .option-title,
+#applyForm .option-description {
+  text-align: left !important;
+}
+
+/* Radio / Checkbox labels */
+#applyForm .checkboxLabel,
+#applyForm .styled-form-component label {
+  text-align: left !important;
+}
+
+/* Questionnaire wrapper */
+#applyForm .questionnaire,
+#applyForm .questionnairesWidget,
+#applyForm .questionnaires,
+#applyForm .question,
+#applyForm .fieldset {
   display: flex !important;
   flex-direction: column !important;
-  align-items: flex-start !important;   /* Left alignment */
-  justify-content: flex-start !important;
+  align-items: flex-start !important;
   width: 100% !important;
-  box-sizing: border-box !important;
 }
 
-/* Section titles and descriptions */
-.questionnaire .questionnaire-header h3,
-.questionnaire .questionnaire-description {
+/* Privacy policy section */
+#applyForm .privacyPolicy {
   text-align: left !important;
 }
 
-/* Questions block */
-.questionnaire .questions {
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;   /* Left-aligned questions */
-}
-
-/* Individual question fieldset */
-.questionnaire .question {
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;   /* Left-aligned fields */
-}
-
-/* Question titles (e.g., Gender, Race, Veteran) */
-.questionnaire .question-title {
+/* Error & helper text */
+#applyForm .error-message,
+#applyForm .field-error,
+#applyForm .help-block,
+#applyForm .field-description {
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+  color: #FF5252 !important;
+  line-height: 18px !important;
   text-align: left !important;
 }
 
-/* Question descriptions and fine print */
-.questionnaire .question-description,
-.questionnaire .question-fineprint {
-  text-align: left !important;
+/* Remove any offsetting for left alignment */
+#applyForm .col-sm-offset-3 {
+  margin-left: 0 !important;
 }
 
-/* Dropdown styling */
-.questionnaire .dropdown {
-  width: auto !important;
-  margin: 12px 0 !important;   /* Standard spacing, no centering */
+/* Ensure Apply Now button is untouched (no visual overrides) */
+#applyForm .applyButton {
+  /* Leave default Comeet button styling */
 }
 
-/* Dropdown menu options */
-.questionnaire .dropdown-menu {
-  text-align: left !important;
-}
-
-/* Option titles and explanations */
-.questionnaire .option-title,
-.questionnaire .option-description {
-  text-align: left !important;
-}
-
-/* Responsive: keep left alignment on mobile */
+/* Responsive: maintain left alignment on mobile */
 @media (max-width: 600px) {
-  .questionnaire .questionnaire-header h3 {
-    font-size: 20px !important;
+  #applyForm label,
+  #applyForm .control-label,
+  #applyForm .question-title {
+    font-size: 14px !important;
+    line-height: 20px !important;
     text-align: left !important;
   }
 }
+
 
