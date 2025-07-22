@@ -1,130 +1,66 @@
 /* ============================
-   ArriveAI Comeet Custom CSS
-   Center Entire Application Form Content
+   ArriveAI Comeet Form Alignment Only
    ============================ */
 
-/* Outer wrapper: center the block on the screen */
+/* Outer wrapper: center the whole form block in the viewport */
 #comeet-form-wrapper {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   flex-direction: column !important;
   width: 100% !important;
-  height: 100vh !important; /* Full screen height */
+  height: 100vh !important; /* Full viewport height */
   box-sizing: border-box !important;
   padding: 40px 20px !important;
 }
 
-/* Prevent inner form container from stretching too wide */
+/* Inner container max width control */
 #apply-form-container {
   max-width: 800px !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
-/* Center the entire Comeet widget content */
+/* Center the Comeet widget content */
 .comeet-applyform {
   display: flex !important;
   flex-direction: column !important;
-  align-items: center !important;       /* Horizontal centering */
-  justify-content: center !important;   /* Vertical centering */
-  font-family: Arial, sans-serif !important;
-  font-size: 14px !important;
-  font-weight: 400 !important;
-  line-height: 13px !important;
-  color: #333333 !important;
-  width: 100%;
-  box-sizing: border-box;
+  align-items: center !important;       /* Center horizontally */
+  justify-content: center !important;   /* Center vertically */
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-/* Headings */
+/* Center headings and labels */
 .comeet-applyform h2,
 .comeet-applyform legend,
-.comeet-applyform .control-label {
-  font-family: 'Gilroy', sans-serif !important;
-  font-size: 28px !important;
-  font-weight: 600 !important;
-  color: #85E34A !important;
-  margin-bottom: 16px !important;
-  text-align: center !important; /* Center headings */
-}
-
-/* Paragraphs, labels, and helper text */
-.comeet-applyform p,
+.comeet-applyform .control-label,
 .comeet-applyform label,
 .comeet-applyform .help-block,
 .comeet-applyform .field-description {
-  color: #333333 !important;
-  font-family: Arial, sans-serif !important;
-  font-size: 14px !important;
-  line-height: 13px !important;
-  margin-bottom: 12px !important;
-  text-align: center !important; /* Center all text and labels */
+  text-align: center !important;
 }
 
-/* Form groups (fields) */
+/* Center form groups (inputs & fields) */
 .comeet-applyform .form-group {
   width: 100% !important;
   display: flex !important;
   flex-direction: column !important;
-  align-items: center !important; /* Center the group content */
+  align-items: center !important;
   margin-bottom: 20px !important;
 }
 
-/* Required asterisk */
-.comeet-applyform label.required:after {
-  content: " *";
-  color: #FF5252 !important;
-  font-weight: 700;
-}
-
-/* DO NOT override input, textarea, select fields */
-/* Use Comeet's native styles for fields */
-
-/* Center the submit button */
+/* Center submit button */
 .comeet-applyform .submit-button {
   display: block !important;
   margin: 24px auto !important;
-  width: auto !important; /* Prevent 100% width */
+  width: auto !important; /* Remove full width */
 }
 
-/* Error messages */
+/* Center error messages and thank-you message */
 .comeet-applyform .error-message,
-.comeet-applyform .field-error {
-  color: #FF5252 !important;
-  font-size: 12px !important;
-  margin-top: 6px !important;
-  font-family: Arial, sans-serif !important;
-  text-align: center !important;
-  display: block !important;
-}
-
-/* Thank you message */
+.comeet-applyform .field-error,
 .comeet-applyform .thankyou-message {
-  font-family: 'Gilroy', sans-serif !important;
-  color: #85E34A !important;
-  font-size: 22px !important;
   text-align: center !important;
-  margin: 40px 0 !important;
-}
-
-/* Dropdown placeholders */
-.comeet-applyform select option[value=""][disabled] {
-  color: #888888 !important;
-}
-
-/* Labels layout */
-.comeet-applyform label {
   display: block !important;
-  margin-bottom: 6px !important;
-  text-align: center !important;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .comeet-applyform h2,
-  .comeet-applyform legend,
-  .comeet-applyform .control-label {
-    font-size: 24px !important;
-  }
 }
