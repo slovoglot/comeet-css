@@ -1,1 +1,21 @@
+/* ArriveAI Custom Form CSS */
+.comeet-applyform {
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #333333 !important;
+}
+
+.comeet-applyform label,
+.comeet-applyform .control-label,
+.comeet-applyform .question-title,
+.comeet-applyform h3 {
+  text-align: center !important;
+}
+
+.comeet-applyform input,
+.comeet-applyform textarea,
+.comeet-applyform select {
+  text-align: center !important;
+}
 
