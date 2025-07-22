@@ -1,1 +1,71 @@
+/* ============================
+   ArriveAI EEOC Questionnaire Alignment
+   ============================ */
+
+/* Center the EEOC questionnaire block */
+.questionnaire {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Horizontal centering */
+  justify-content: center !important; /* Vertical centering if space allows */
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Center section titles */
+.questionnaire .questionnaire-header h3,
+.questionnaire .questionnaire-description {
+  text-align: center !important;
+}
+
+/* Center each question block */
+.questionnaire .questions {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Center each question fieldset */
+.questionnaire .question {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Center legends (titles like Gender, Veteran Status) */
+.questionnaire .question-title {
+  text-align: center !important;
+}
+
+/* Center question descriptions (fine print, explanations) */
+.questionnaire .question-description,
+.questionnaire .question-fineprint {
+  text-align: center !important;
+}
+
+/* Center dropdowns */
+.questionnaire .dropdown {
+  width: auto !important;
+  margin: 12px auto !important; /* Center horizontally */
+}
+
+/* Center dropdown options */
+.questionnaire .dropdown-menu {
+  text-align: center !important;
+}
+
+/* Center option titles and explanations */
+.questionnaire .option-title,
+.questionnaire .option-description {
+  text-align: center !important;
+}
+
+/* Responsive: ensure mobile keeps centered layout */
+@media (max-width: 600px) {
+  .questionnaire .questionnaire-header h3 {
+    font-size: 20px !important;
+  }
+}
 
