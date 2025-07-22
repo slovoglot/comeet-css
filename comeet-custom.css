@@ -2,6 +2,24 @@
    ArriveAI Comeet Custom CSS
    Inputs & Button Left as Default
    ============================ */
+/* Center the entire form on the screen */
+#comeet-form-wrapper {
+  display: flex !important;
+  justify-content: center !important;   /* Horizontal center */
+  align-items: center !important;       /* Vertical center */
+  flex-direction: column !important;
+  width: 100% !important;
+  height: 100vh !important;              /* Full viewport height */
+  box-sizing: border-box !important;
+  padding: 40px 20px !important;         /* Optional padding */
+}
+
+/* Prevent inner form container from stretching too wide */
+#apply-form-container {
+  max-width: 800px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
 
 /* Global text and layout */
 .comeet-applyform {
