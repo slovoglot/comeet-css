@@ -1,1 +1,72 @@
+/* ============================
+   ArriveAI EEOC Questionnaire Left Alignment Only
+   ============================ */
+
+/* EEOC questionnaire wrapper */
+.questionnaire {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;   /* Left alignment */
+  justify-content: flex-start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Section titles and descriptions */
+.questionnaire .questionnaire-header h3,
+.questionnaire .questionnaire-description {
+  text-align: left !important;
+}
+
+/* Questions block */
+.questionnaire .questions {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;   /* Left-aligned questions */
+}
+
+/* Individual question fieldset */
+.questionnaire .question {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;   /* Left-aligned fields */
+}
+
+/* Question titles (e.g., Gender, Race, Veteran) */
+.questionnaire .question-title {
+  text-align: left !important;
+}
+
+/* Question descriptions and fine print */
+.questionnaire .question-description,
+.questionnaire .question-fineprint {
+  text-align: left !important;
+}
+
+/* Dropdown styling */
+.questionnaire .dropdown {
+  width: auto !important;
+  margin: 12px 0 !important;   /* Standard spacing, no centering */
+}
+
+/* Dropdown menu options */
+.questionnaire .dropdown-menu {
+  text-align: left !important;
+}
+
+/* Option titles and explanations */
+.questionnaire .option-title,
+.questionnaire .option-description {
+  text-align: left !important;
+}
+
+/* Responsive: keep left alignment on mobile */
+@media (max-width: 600px) {
+  .questionnaire .questionnaire-header h3 {
+    font-size: 20px !important;
+    text-align: left !important;
+  }
+}
 
