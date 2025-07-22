@@ -1,18 +1,18 @@
 /* ============================
    ArriveAI Comeet Custom CSS
-   Center Alignment After Personal Note
+   Center Entire Application Form Content
    ============================ */
 
-/* Center the entire form on the screen */
+/* Outer wrapper: center the block on the screen */
 #comeet-form-wrapper {
   display: flex !important;
-  justify-content: center !important;   /* Horizontal center */
-  align-items: center !important;       /* Vertical center */
+  justify-content: center !important;
+  align-items: center !important;
   flex-direction: column !important;
   width: 100% !important;
-  height: 100vh !important;              /* Full viewport height */
+  height: 100vh !important; /* Full screen height */
   box-sizing: border-box !important;
-  padding: 40px 20px !important;         /* Optional padding */
+  padding: 40px 20px !important;
 }
 
 /* Prevent inner form container from stretching too wide */
@@ -22,8 +22,12 @@
   box-sizing: border-box !important;
 }
 
-/* Global text and layout */
+/* Center the entire Comeet widget content */
 .comeet-applyform {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;       /* Horizontal centering */
+  justify-content: center !important;   /* Vertical centering */
   font-family: Arial, sans-serif !important;
   font-size: 14px !important;
   font-weight: 400 !important;
@@ -42,12 +46,12 @@
   font-weight: 600 !important;
   color: #85E34A !important;
   margin-bottom: 16px !important;
+  text-align: center !important; /* Center headings */
 }
 
 /* Paragraphs, labels, and helper text */
 .comeet-applyform p,
 .comeet-applyform label,
-.comeet-applyform .form-group,
 .comeet-applyform .help-block,
 .comeet-applyform .field-description {
   color: #333333 !important;
@@ -55,6 +59,16 @@
   font-size: 14px !important;
   line-height: 13px !important;
   margin-bottom: 12px !important;
+  text-align: center !important; /* Center all text and labels */
+}
+
+/* Form groups (fields) */
+.comeet-applyform .form-group {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Center the group content */
+  margin-bottom: 20px !important;
 }
 
 /* Required asterisk */
@@ -65,10 +79,14 @@
 }
 
 /* DO NOT override input, textarea, select fields */
-/* Let Comeet handle field design natively */
+/* Use Comeet's native styles for fields */
 
-/* DO NOT override the submit button */
-/* Leave "Apply Now at ArriveAI" button default */
+/* Center the submit button */
+.comeet-applyform .submit-button {
+  display: block !important;
+  margin: 24px auto !important;
+  width: auto !important; /* Prevent 100% width */
+}
 
 /* Error messages */
 .comeet-applyform .error-message,
@@ -77,7 +95,7 @@
   font-size: 12px !important;
   margin-top: 6px !important;
   font-family: Arial, sans-serif !important;
-  text-align: center !important; /* Center error messages */
+  text-align: center !important;
   display: block !important;
 }
 
@@ -95,23 +113,11 @@
   color: #888888 !important;
 }
 
-/* Label layout for labels-position="top" */
+/* Labels layout */
 .comeet-applyform label {
   display: block !important;
   margin-bottom: 6px !important;
-}
-
-/* Field spacing */
-.comeet-applyform .form-group {
-  margin-bottom: 20px !important;
-  text-align: left !important; /* Keep form fields left-aligned */
-}
-
-/* Center submit button after Personal Note */
-.comeet-applyform .submit-button {
-  display: block !important;
-  margin: 24px auto !important;   /* Center horizontally */
-  width: auto !important;         /* Auto width to avoid full width */
+  text-align: center !important;
 }
 
 /* Responsive adjustments */
