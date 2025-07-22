@@ -1,7 +1,8 @@
 /* ============================
    ArriveAI Comeet Custom CSS
-   Inputs & Button Left as Default
+   Center Alignment After Personal Note
    ============================ */
+
 /* Center the entire form on the screen */
 #comeet-form-wrapper {
   display: flex !important;
@@ -76,6 +77,8 @@
   font-size: 12px !important;
   margin-top: 6px !important;
   font-family: Arial, sans-serif !important;
+  text-align: center !important; /* Center error messages */
+  display: block !important;
 }
 
 /* Thank you message */
@@ -83,7 +86,7 @@
   font-family: 'Gilroy', sans-serif !important;
   color: #85E34A !important;
   font-size: 22px !important;
-  text-align: center;
+  text-align: center !important;
   margin: 40px 0 !important;
 }
 
@@ -101,6 +104,14 @@
 /* Field spacing */
 .comeet-applyform .form-group {
   margin-bottom: 20px !important;
+  text-align: left !important; /* Keep form fields left-aligned */
+}
+
+/* Center submit button after Personal Note */
+.comeet-applyform .submit-button {
+  display: block !important;
+  margin: 24px auto !important;   /* Center horizontally */
+  width: auto !important;         /* Auto width to avoid full width */
 }
 
 /* Responsive adjustments */
