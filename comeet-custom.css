@@ -1,47 +1,51 @@
 /* ============================
    ArriveAI Comeet Form Alignment Only
+   Center All Sections from Application Information Onward
    ============================ */
 
-/* Outer wrapper: center the whole form block in the viewport */
+/* Outer wrapper: center the entire widget in the viewport */
 #comeet-form-wrapper {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   flex-direction: column !important;
   width: 100% !important;
-  height: 100vh !important; /* Full viewport height */
+  height: 100vh !important;
   box-sizing: border-box !important;
   padding: 40px 20px !important;
 }
 
-/* Inner container max width control */
+/* Inner container: restrict max width */
 #apply-form-container {
   max-width: 800px !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
-/* Center the Comeet widget content */
+/* Center the entire Comeet widget content */
 .comeet-applyform {
   display: flex !important;
   flex-direction: column !important;
-  align-items: center !important;       /* Center horizontally */
-  justify-content: center !important;   /* Center vertically */
+  align-items: center !important;       /* Horizontal center */
+  justify-content: center !important;   /* Vertical center */
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
-/* Center headings and labels */
-.comeet-applyform h2,
-.comeet-applyform legend,
-.comeet-applyform .control-label,
-.comeet-applyform label,
-.comeet-applyform .help-block,
-.comeet-applyform .field-description {
+/* Center all fieldsets and sections */
+.comeet-applyform fieldset {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+/* Center section titles */
+.comeet-applyform fieldset legend {
   text-align: center !important;
 }
 
-/* Center form groups (inputs & fields) */
+/* Center form fields */
 .comeet-applyform .form-group {
   width: 100% !important;
   display: flex !important;
@@ -50,11 +54,18 @@
   margin-bottom: 20px !important;
 }
 
-/* Center submit button */
+/* Center labels and helper text */
+.comeet-applyform label,
+.comeet-applyform .help-block,
+.comeet-applyform .field-description {
+  text-align: center !important;
+}
+
+/* Center the submit button */
 .comeet-applyform .submit-button {
   display: block !important;
   margin: 24px auto !important;
-  width: auto !important; /* Remove full width */
+  width: auto !important; /* Remove 100% width */
 }
 
 /* Center error messages and thank-you message */
@@ -63,4 +74,11 @@
 .comeet-applyform .thankyou-message {
   text-align: center !important;
   display: block !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .comeet-applyform fieldset legend {
+    font-size: 24px !important;
+  }
 }
