@@ -60,7 +60,7 @@ textarea {
 }
 
 /*UL element for the "Application Information" going down*/
-.ul {
+.nf-if {
   font-family: 'Satoshi', sans-serif;
   color: #111111;
   font-size: 14px;
