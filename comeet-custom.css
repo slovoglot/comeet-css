@@ -33,3 +33,18 @@ textarea {
   display: block;
   margin: 0 auto;
 }
+/*Message above the application*/
+.mediumText {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.required-asterisk {
+  color: #ff4d4f; /* red asterisk */
+  font-weight: bold;
+  margin: 0 4px;
+}
+
