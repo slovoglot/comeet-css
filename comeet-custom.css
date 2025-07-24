@@ -1,8 +1,11 @@
 /* Form container */
 .form-group {
   background-color: #FFFFFF;
+  font-family: 'Satoshi', sans-serif;
+  color: #111111;
   padding: 20px;
   margin-bottom: 16px;
+  font-size: 14xp;
 }
 
 /* Labels */
