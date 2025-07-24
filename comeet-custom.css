@@ -1,8 +1,7 @@
 /* Form container */
 .form-group {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
   border-radius: 16px;
   padding: 20px;
   margin-bottom: 16px;
@@ -11,28 +10,33 @@
 /* Labels */
 .control-label {
   font-family: 'Satoshi', sans-serif;
-  color: #EAEAEA;
+  color: #111111;
   font-size: 14px;
+  font-weight: 500;
 }
 
 /* Inputs */
 input,
 textarea {
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: #ffffff;
+  color: #111111;
+  border: 1px solid #cccccc;
   border-radius: 8px;
   padding: 10px;
+  font-size: 14px;
+  font-family: 'Satoshi', sans-serif;
 }
 
 /* Submit Button */
 .submit-button {
   background-color: #57B71D;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   border: none;
   border-radius: 8px;
   padding: 12px 24px;
+  font-size: 15px;
+  cursor: pointer;
   transition: background 0.3s ease;
 }
 
