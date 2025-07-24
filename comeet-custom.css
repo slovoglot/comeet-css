@@ -68,3 +68,10 @@ textarea {
   text-align: left; 
 }
 
+@font-face {
+    font-family: 'Satoshi';
+    src: url('path/to/Satoshi-Regular.woff2') format('woff2'),
+         url('path/to/Satoshi-Regular.woff') format('woff');
+  
+}
+
