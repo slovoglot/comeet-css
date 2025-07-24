@@ -14,15 +14,22 @@ html, body {
   padding: 0;
 }
 
-/* Form-group spacing */
+/* Form-group spacing and layout */
 .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 18px;
+  width: 100%;
 }
 
 /* Labels */
 label.control-label {
   font-weight: 600;
   color: #222;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-family: 'Satoshi', sans-serif;
 }
 
 /* Required asterisk */
@@ -36,7 +43,13 @@ label.control-label {
   border-radius: 4px;
   padding: 8px 12px;
   transition: border-color .2s;
+  font-size: 14px;
+  font-family: 'Satoshi', sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  width: 100%;
 }
+
 .form-control:focus {
   border-color: #57B71D;
   outline: none;
