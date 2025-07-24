@@ -1,71 +1,83 @@
-/* Form container */
-.form-group {
-  background-color: #FFFFFF;
-  font-family: 'Satoshi', sans-serif;
-  color: #111111;
+/* Base styling */
+html, body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  color: #333;
+  background: #f9f9f9;
+  margin: 0;
   padding: 20px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  text-align: center;
+}
+
+/* Form container */
+.apply-form, form {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* Form-group spacing */
+.form-group {
+  margin-bottom: 18px;
 }
 
 /* Labels */
-.control-label {
-  font-family: 'Satoshi', sans-serif;
-  color: #111111;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-  display: block;
-}
-
-/* Inputs */
-input,
-textarea {
-  background-color: #ffffff;
-  color: #111111;
-  border: 1px solid #cccccc;
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 14px;
-  font-family: 'Satoshi', sans-serif;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Submit Button */
-.submit-button {
-  background-color: #57B71D;
-  color: #ffffff;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  display: block;
-  margin: 24px auto;
-}
-
-.submit-button:hover {
-  background-color: #46a10f;
-}
-
-/* Required field message */
-.mediumText {
-  font-family: 'Satoshi', sans-serif;
-  font-size: 14px;
-  color: #333333;
-  text-align: center;
-  margin: 20px 0;
-}
-
-.required-asterisk {
-  color: #FF5252;
+label.control-label {
   font-weight: 600;
-  margin: 0 2px;
+  color: #222;
 }
 
+/* Required asterisk */
+.required-asterisk {
+  color: #e03;
+}
 
+/* Inputs and textarea */
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: border-color .2s;
+}
+.form-control:focus {
+  border-color: #57B71D;
+  outline: none;
+  box-shadow: 0 0 3px rgba(87, 183, 29, .5);
+}
+
+/* File input link label */
+.clickableLink {
+  color: #57B71D;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Submit button */
+.applyButton.brandColoredButton {
+  background-color: #57B71D;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+.applyButton.brandColoredButton:hover {
+  background-color: #45a017;
+}
+
+/* Error states */
+input.ng-invalid.ng-touched {
+  border-color: #e03;
+}
+
+/* Scrollbar tweaks (WebKit-based browsers) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
