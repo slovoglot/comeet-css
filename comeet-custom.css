@@ -1,23 +1,12 @@
-.section-wrapper {
-  background-color: #FFFFFF;
-  font-family: 'Satoshi', sans-serif;
-  font-weight: 500;
-  color: #111111;
-  font-size: 14px;
-  font-height: 20px;
-  text-alignment: left;
-}
-
 /* Form container */
 .form-group {
   background-color: #FFFFFF;
   font-family: 'Satoshi', sans-serif;
-  font-weight: 500;
   color: #111111;
-  /*padding: 20px;*/
+  padding: 20px;
   margin-bottom: 16px;
-  font-size: 14px; /* fixed typo from '14xp' */
-  text-align: left;
+  font-size: 14px;
+  text-align: center;
 }
 
 /* Labels */
@@ -26,7 +15,7 @@
   color: #111111;
   font-size: 14px;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
   display: block;
 }
 
@@ -40,42 +29,43 @@ textarea {
   padding: 10px;
   font-size: 14px;
   font-family: 'Satoshi', sans-serif;
-  text-align: left;
+  text-align: center;
   display: block;
   margin: 0 auto;
 }
-/*Message above the application*/
+
+/* Submit Button */
+.submit-button {
+  background-color: #57B71D;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 24px auto;
+}
+
+.submit-button:hover {
+  background-color: #46a10f;
+}
+
+/* Required field message */
 .mediumText {
   font-family: 'Satoshi', sans-serif;
   font-size: 14px;
-  color: #111111;
-  text-align: left;
-  margin: 16px 0;
+  color: #333333;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .required-asterisk {
-  color: #ff4d4f; /* red asterisk */
-  font-weight: bold;
-  margin: 0 4px;
+  color: #FF5252;
+  font-weight: 600;
+  margin: 0 2px;
 }
 
-/*UL element for the "Application Information" going down*/
-.nf-if {
-  font-family: 'Satoshi', sans-serif;
-  color: #111111;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: left; 
-}
-
-@font-face {
-    font-family: 'Satoshi';
-    src: url('path/to/Satoshi-Regular.woff2') format('woff2'),
-         url('path/to/Satoshi-Regular.woff') format('woff');
-  
-}
-
-.row {
-  
-}
 
