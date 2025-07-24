@@ -9,9 +9,20 @@ html, body {
 }
 
 /* Form container */
-.apply-form, form {
+#comeet-form-wrapper,
+.apply-form,
+form {
   max-width: 100%;
   padding: 0;
+  margin: 0 auto 20px 0; /* Align left */
+  text-align: left;
+}
+
+/* Force full width and left-align inside iframe */
+.apply-form .form-container,
+form {
+  margin-left: 0 !important;
+  text-align: left !important;
 }
 
 /* Form-group spacing and layout */
@@ -20,7 +31,7 @@ html, body {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 18px;
-  width: 100%;
+  width: 100% !important;
 }
 
 /* Labels */
@@ -30,6 +41,7 @@ label.control-label {
   margin-bottom: 6px;
   font-size: 14px;
   font-family: 'Satoshi', sans-serif;
+  text-align: left;
 }
 
 /* Required asterisk */
@@ -63,6 +75,14 @@ label.control-label {
   cursor: pointer;
 }
 
+/* Submit button container alignment */
+.form-group.submit-button,
+.form-group .submit-button,
+.applyButton.brandColoredButton {
+  align-self: flex-start;
+  text-align: left;
+}
+
 /* Submit button */
 .applyButton.brandColoredButton {
   background-color: #57B71D;
@@ -74,6 +94,7 @@ label.control-label {
   cursor: pointer;
   transition: background-color .2s;
 }
+
 .applyButton.brandColoredButton:hover {
   background-color: #45a017;
 }
