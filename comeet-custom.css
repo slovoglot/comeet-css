@@ -6,32 +6,29 @@ html, body {
   background: #ffffff;
   margin: 0;
   padding: 20px;
+  text-align: left;
 }
 
 /* Form container */
-#comeet-form-wrapper,
 .apply-form,
 form {
   max-width: 100%;
   padding: 0;
-  margin: 0 auto 20px 0; /* Align left */
-  text-align: left;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-/* Force full width and left-align inside iframe */
-.apply-form .form-container,
-form {
-  margin-left: 0 !important;
-  text-align: left !important;
-}
-
-/* Form-group spacing and layout */
+/* Make sure all form group blocks align left */
 .form-group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 18px;
-  width: 100% !important;
+  width: 100%;
+  text-align: left;
 }
 
 /* Labels */
@@ -42,6 +39,7 @@ label.control-label {
   font-size: 14px;
   font-family: 'Satoshi', sans-serif;
   text-align: left;
+  width: 100%;
 }
 
 /* Required asterisk */
@@ -75,15 +73,7 @@ label.control-label {
   cursor: pointer;
 }
 
-/* Submit button container alignment */
-.form-group.submit-button,
-.form-group .submit-button,
-.applyButton.brandColoredButton {
-  align-self: flex-start;
-  text-align: left;
-}
-
-/* Submit button */
+/* Submit button alignment */
 .applyButton.brandColoredButton {
   background-color: #57B71D;
   color: #fff;
@@ -93,8 +83,8 @@ label.control-label {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color .2s;
+  align-self: flex-start; /* Key for button alignment */
 }
-
 .applyButton.brandColoredButton:hover {
   background-color: #45a017;
 }
