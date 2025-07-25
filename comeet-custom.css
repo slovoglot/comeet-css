@@ -79,7 +79,7 @@ button {
   direction: ltr !important;
   font-family: 'Satoshi', sans-serif;
   box-sizing: border-box;
-  width: max-content;
+  width: 100%;
 }
 
 /* === Form structure === */
@@ -163,6 +163,7 @@ button,
         font-display: swap;
     }
 li {
-  margin-right: 100px;
+  width: max-content;
+  
 }
 
