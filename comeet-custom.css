@@ -74,6 +74,7 @@ input,
 textarea,
 select,
 button {
+  align-content: stretch;
   text-align: left !important;
   direction: ltr !important;
   font-family: 'Satoshi', sans-serif;
