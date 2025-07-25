@@ -104,3 +104,75 @@ input.ng-invalid.ng-touched {
   background: #ccc;
   border-radius: 3px;
 }
+/* Force alignment to the left for all relevant elements */
+  .questionnaire,
+  .questionnairesWidget,
+  .questionnaires,
+  .question,
+  .fieldset,
+  .question-title,
+  .option-title,
+  .question-description,
+  .question-fineprint,
+  .dropdown,
+  .dropdown-menu,
+  .checkboxLabel {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+
+  /* Remove any horizontal centering margins */
+  .col-xs-12.col-sm-9.col-sm-offset-3 {
+    margin: 0 !important;
+    padding: 0 12px !important;
+    width: 100% !important;
+  }
+
+  /* Inputs and fieldset spacing for better structure */
+  .form-control,
+  .dropdown-toggle,
+  .checkboxLabel {
+    max-width: 100% !important;
+    margin-bottom: 16px;
+  }
+
+  .questionnaire .question {
+    margin-bottom: 24px;
+  }
+
+  .fieldset {
+    padding: 0;
+    border: none;
+  }
+
+  .option-title,
+  .question-title,
+  .dropdown-toggle,
+  label {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* Clean radio/checkbox stacking */
+  .styled-form-component {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Drop padding on dropdown menus */
+  .dropdown-menu {
+    padding-left: 0;
+  }
+
+  /* Prevent unnecessary indentation */
+  .questionnairesLinks {
+    padding-left: 0 !important;
+    margin-top: 24px;
+  }
+
+  /* Ensure full width form display */
+  .questionnairesWidget ul.questionnaires {
+    width: 100%;
+  }
