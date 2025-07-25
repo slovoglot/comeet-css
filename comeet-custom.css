@@ -1,89 +1,67 @@
-/* Base styling */
-html, body {
+/* ========== Global Resets and Left Alignment ========== */
+html, body, div, form, label, input, textarea, select, button, p, span, h1, h2, h3, h4, h5, h6 {
+  text-align: left !important;
   font-family: 'Satoshi', Arial, sans-serif;
-  font-size: 16px;
-  font-height: 24px;
-  color: #333;
-  background: #ffffff;
   margin: 0;
-  align-items: left;
-}
-
-/* Form container */
-.apply-form,
-form {
-  max-width: 100%;
   padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
-/* Make sure all form group blocks align left */
-.form-group {
+/* Ensure form wrapper is left-aligned */
+form, .apply-form, .questionnaire {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start !important;
+  justify-content: flex-start;
   width: 100%;
-  text-align: left;
+}
+
+/* Form field containers */
+.form-group, .question {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin-bottom: 18px;
 }
 
 /* Labels */
-.label,control-label {
-  font-weight: 500;
+label, .control-label, .question-title {
+  font-weight: 600;
   color: #222;
-  font-size: 16px;
-  font-family: 'Satoshi', sans-serif;
-  text-align: left;
-  align-items: left;
+  font-size: 14px;
+  margin-bottom: 6px;
+  text-align: left !important;
   width: 100%;
 }
 
-/* Required asterisk */
-.required-asterisk {
-  color: #e03;
-}
-
-/* Inputs and textarea */
-.form-control {
+/* Input and textarea */
+input, textarea, select {
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 8px 12px;
-  transition: border-color .2s;
-  font-size: 16px;
-  font-family: 'Satoshi', sans-serif;
-  background-color: #ffffff;
-  color: #111111;
+  padding: 10px 12px;
+  font-size: 14px;
   width: 100%;
+  background-color: #fff;
+  color: #111;
+  text-align: left !important;
 }
 
-.form-control:focus {
-  border-color: #57B71D;
-  outline: none;
-  box-shadow: 0 0 3px rgba(87, 183, 29, .5);
-}
-
-/* File input link label */
-.clickableLink {
-  color: #57B71D;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* Submit button alignment */
-.applyButton {
+/* Submit Button */
+.applyButton.brandColoredButton, button {
   background-color: #57B71D;
-  color: #fff;
+  color: white;
   font-size: 16px;
   padding: 12px 24px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  align-self: flex-start !important;
+  margin-top: 10px;
   transition: background-color .2s;
-  align-self: center; /* Key for button alignment */
 }
+
 .applyButton.brandColoredButton:hover {
   background-color: #45a017;
 }
@@ -93,7 +71,12 @@ input.ng-invalid.ng-touched {
   border-color: #e03;
 }
 
-/* Scrollbar tweaks (WebKit-based browsers) */
+/* Required Asterisk */
+.required-asterisk {
+  color: #e03;
+}
+
+/* Scrollbar (WebKit) */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -104,75 +87,3 @@ input.ng-invalid.ng-touched {
   background: #ccc;
   border-radius: 3px;
 }
-/* Force alignment to the left for all relevant elements */
-  .questionnaire,
-  .questionnairesWidget,
-  .questionnaires,
-  .question,
-  .fieldset,
-  .question-title,
-  .option-title,
-  .question-description,
-  .question-fineprint,
-  .dropdown,
-  .dropdown-menu,
-  .checkboxLabel {
-    text-align: left !important;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-  }
-
-  /* Remove any horizontal centering margins */
-  .col-xs-12.col-sm-9.col-sm-offset-3 {
-    margin: 0 !important;
-    padding: 0 12px !important;
-    width: 100% !important;
-  }
-
-  /* Inputs and fieldset spacing for better structure */
-  .form-control,
-  .dropdown-toggle,
-  .checkboxLabel {
-    max-width: 100% !important;
-    margin-bottom: 16px;
-  }
-
-  .questionnaire .question {
-    margin-bottom: 24px;
-  }
-
-  .fieldset {
-    padding: 0;
-    border: none;
-  }
-
-  .option-title,
-  .question-title,
-  .dropdown-toggle,
-  label {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-
-  /* Clean radio/checkbox stacking */
-  .styled-form-component {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  /* Drop padding on dropdown menus */
-  .dropdown-menu {
-    padding-left: 0;
-  }
-
-  /* Prevent unnecessary indentation */
-  .questionnairesLinks {
-    padding-left: 0 !important;
-    margin-top: 24px;
-  }
-
-  /* Ensure full width form display */
-  .questionnairesWidget ul.questionnaires {
-    width: 100%;
-  }
