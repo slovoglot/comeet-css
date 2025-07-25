@@ -1,55 +1,129 @@
-/* ========== Global Resets and Left Alignment ========== */
-html, body, div, form, label, input, textarea, select, button, p, span, h1, h2, h3, h4, h5, h6 {
+/* === Global Reset + Left Alignment === */
+*,
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1, h2, h3, h4, h5, h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl, dt, dd,
+ol, ul, li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea,
+select,
+button {
   text-align: left !important;
-  font-family: 'Satoshi', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  direction: ltr !important;
+  font-family: 'Satoshi', sans-serif;
   box-sizing: border-box;
 }
 
-/* Ensure form wrapper is left-aligned */
-form, .apply-form, .questionnaire {
+/* === Form structure === */
+#jobFormDiv .form-group,
+#questionnairesDiv .form-group,
+.form-horizontal .form-group,
+.form-group {
   display: flex;
   flex-direction: column;
-  align-items: flex-start !important;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-/* Form field containers */
-.form-group, .question {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start !important;
+  align-items: flex-start;
   text-align: left !important;
   margin-bottom: 18px;
-}
-
-/* Labels */
-label, .control-label, .question-title {
-  font-weight: 600;
-  color: #222;
-  font-size: 14px;
-  margin-bottom: 6px;
-  text-align: left !important;
   width: 100%;
 }
 
-/* Input and textarea */
-input, textarea, select {
+/* === Label === */
+label,
+.control-label {
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 6px;
+  font-weight: 600;
+  width: 100%;
+  text-align: left !important;
+}
+
+/* === Inputs and textareas === */
+input,
+textarea,
+select {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 10px 12px;
-  font-size: 14px;
-  width: 100%;
-  background-color: #fff;
+  background: #fff;
   color: #111;
   text-align: left !important;
 }
 
-/* Submit Button */
-.applyButton.brandColoredButton, button {
+/* === Submit Button === */
+button,
+.applyButton.brandColoredButton {
+  align-self: flex-start !important;
   background-color: #57B71D;
   color: white;
   font-size: 16px;
@@ -57,26 +131,19 @@ input, textarea, select {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  align-self: flex-start !important;
-  margin-top: 10px;
-  transition: background-color .2s;
+  margin-top: 12px;
 }
 
 .applyButton.brandColoredButton:hover {
   background-color: #45a017;
 }
 
-/* Error states */
-input.ng-invalid.ng-touched {
-  border-color: #e03;
-}
-
-/* Required Asterisk */
+/* === Required asterisk === */
 .required-asterisk {
   color: #e03;
 }
 
-/* Scrollbar (WebKit) */
+/* === Scrollbars === */
 ::-webkit-scrollbar {
   width: 6px;
 }
