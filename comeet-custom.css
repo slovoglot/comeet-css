@@ -1,49 +1,41 @@
-/* ===================================================================
-   comeet-custom.css
-   Embed: 75% width + 25% right gutter, labels on top, full-width fields,
-   and 25% left indent for “Applicant Information” onward
-   =================================================================== */
+/* ==========================================================================
+   Comeet Embed – Full Alignment Overrides (comeet-custom.css)
+   ========================================================================== */
 
-/* 1) Root embed container + form */
+/* 1) Center the embed and set your font */
 #apply-form-container,
 #apply-form-container .form-container,
 #apply-form-container #jobFormDiv,
 #apply-form-container form#applyForm {
-  width: 75% !important;           /* fill 75% of parent */
-  max-width: 75% !important;
-  margin: 0 25% 0 0 !important;    /* leave 25% empty on right */
-  padding: 0 !important;
-  box-sizing: border-box !important;
+  max-width: 900px;
+  margin: 0 auto;
   font-family: 'Satoshi', sans-serif !important;
+  box-sizing: border-box;
 }
 
-/* 2) Make each field-group a full-width block */
+/* 2) Stack labels on top of inputs */
 #apply-form-container .form-group {
   display: block !important;
   width: 100% !important;
-  clear: both !important;
   margin-bottom: 1.5rem !important;
 }
-
-/* 3) Stack labels above their controls */
 #apply-form-container .form-group label {
   display: block !important;
-  width: 100% !important;
   margin-bottom: 0.5rem !important;
   text-align: left !important;
 }
 
-/* 4) Inputs, textareas & selects fill 100% */
+/* 3) Make controls fill the container */
 #apply-form-container .form-group input,
 #apply-form-container .form-group textarea,
-#apply-form-container .form-group select {
-  display: block !important;
+#apply-form-container .form-group select,
+#apply-form-container .form-group .col-xs-12.col-sm-9 {
   width: 100% !important;
   box-sizing: border-box !important;
   margin: 0 !important;
 }
 
-/* 5) Style “Attach” links under file fields */
+/* 4) “Attach” links under resume/cover/portfolio */
 #apply-form-container .form-group.field-resume a,
 #apply-form-container .form-group.field-cover-letter a,
 #apply-form-container .form-group.field-portfolio a {
@@ -51,19 +43,31 @@
   margin-top: 0.25rem !important;
 }
 
-/* 6) Submit button – full width */
+/* 5) Full-width submit button */
 #apply-form-container .form-group.submit-button {
   text-align: center !important;
   margin-top: 2rem !important;
 }
 #apply-form-container .form-group.submit-button button {
-  display: block !important;
   width: 100% !important;
-  font-family: 'Satoshi', sans-serif !important;
 }
 
-/* 7) Indent “Applicant Information” section & all following elements by 25% */
-#apply-form-container h3.questionnaire-name,
-#apply-form-container h3.questionnaire-name ~ * {
-  margin-left: 25% !important;
+/* ==========================================================================
+   6) Indent “Applicant Information” & all its questions by 25%
+      so they line up under the input fields above
+   ========================================================================== */
+@media (min-width: 768px) {
+  /* Wrap list container */
+  #apply-form-container .form-group.form-group-questionnaires > .col-xs-12 {
+    margin-left: 25% !important;
+    width: 75% !important;
+  }
+  /* The questionnaire & its children */
+  #apply-form-container .questionnaire,
+  #apply-form-container .questionnaire-header,
+  #apply-form-container .questions,
+  #apply-form-container .question {
+    margin-left: 25% !important;
+    width: 75% !important;
+  }
 }
