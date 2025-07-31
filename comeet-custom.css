@@ -12,3 +12,34 @@
   font-family: 'Satoshi', sans-serif !important;
 }
 
+/* Make every form‐group full-width and stack its children */
+#jobFormDiv .form-group {
+  display: block !important;
+  width: 100% !important;
+  float: none !important;
+  margin: 0 0 1.5rem !important; /* adjust spacing between fields */
+}
+
+/* Force labels on top */
+#jobFormDiv .form-group label {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 0.5rem !important;
+  text-align: left !important;
+}
+
+/* Inputs and textareas fill their container */
+#jobFormDiv .form-group input,
+#jobFormDiv .form-group textarea {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Also handle the “Attach” links for resume/cover-letter */
+#jobFormDiv .form-group.field-resume a,
+#jobFormDiv .form-group.field-cover-letter a {
+  display: inline-block !important;
+  margin-top: 0.25rem !important;
+}
+
+
