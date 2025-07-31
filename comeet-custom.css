@@ -92,3 +92,38 @@
     width: 100% !important;
   }
 }
+
+/* ─── 1) Remove the built-in col-sm-offset-3 on the questionnaire block ───────── */
+@media (min-width: 768px) {
+  form#applyForm
+    .form-group.form-group-questionnaires
+    > .col-sm-9.col-sm-offset-3 {
+    /* reset the Bootstrap offset */
+    margin-left: 0 !important;
+    /* let it span full width of its container */
+    width: 100% !important;
+  }
+}
+
+/* ─── 2) Now flush “Applicant Information” & its questions LEFT
+        and leave 25% blank on the RIGHT ───────────────────────────────── */
+@media (min-width: 768px) {
+  form#applyForm .questionnaire-header,
+  form#applyForm .questions,
+  form#applyForm .questions .question {
+    margin-left: 0 !important;      /* hug the left edge */
+    margin-right: 25% !important;   /* blank 25% gutter on the right */
+    width: 75% !important;          /* content takes the remaining 75% */
+  }
+}
+
+/* ─── 3) Mobile: full width again ───────────────────────────────────────────── */
+@media (max-width: 767px) {
+  form#applyForm .questionnaire-header,
+  form#applyForm .questions,
+  form#applyForm .questions .question {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}
+
