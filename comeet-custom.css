@@ -172,3 +172,19 @@
   margin:     0         !important;
   overflow:   visible   !important;
 }
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* ▸ ONLY the first four rows (first/last name, email, phone) go 125% wide    */
+/*    everything else stays at 100%                                            */
+/* ─────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  /* target exactly those four fields’ right-hand column */
+  #applyForm .form-group.field-first-name > .col-sm-9,
+  #applyForm .form-group.field-last-name  > .col-sm-9,
+  #applyForm .form-group.field-email      > .col-sm-9,
+  #applyForm .form-group.field-phone      > .col-sm-9 {
+    width:      125% !important;
+    max-width:  none !important;
+    box-sizing: border-box !important;
+  }
+}
+
