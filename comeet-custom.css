@@ -138,21 +138,19 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 7) RELEASE WEBFLOW CONTAINER & SPILL THE IFRAME                            */
+/* 7) RELEASE PARENT OVERFLOW SO THE IFRAME CAN ACTUALLY SPILL               */
 /* ─────────────────────────────────────────────────────────────────────────── */
 .careers-page .w-container,
-.jobs-referral-code-embed {
+.jobs-referral-code-embed,
+.careers-page section {
   max-width: none       !important;
   width:     100%       !important;
   padding:   0          !important;
   overflow-x: visible   !important;
 }
-.careers-page section {
-  overflow-x: visible   !important; /* in case your theme wraps in a <section> */
-}
 .jobs-referral-code-embed iframe.comeet-iframe {
   width:      125%      !important;
-  min-width: 125%      !important;
+  min-width:  125%      !important;
   margin:     0         !important;
   overflow:   visible   !important;
 }
