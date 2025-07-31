@@ -1,25 +1,25 @@
 /* ==========================================================================
-   comeet-custom.css – Full form styling + flush-left questionnaire gutter
+   comeet-custom.css
    ========================================================================== */
 
-/* ─── 1) Center the embed & set font ─────────────────────────────────────── */
+/* ─── 1) Embed container: center @ 900px + Satoshi ───────────────────────── */
 #apply-form-container,
 #apply-form-container .form-container,
 #apply-form-container form#applyForm {
   max-width: 900px;
   margin: 0 auto !important;
   font-family: 'Satoshi', sans-serif !important;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
-/* ─── 2) Stack each form-group vertically & full-width ───────────────────── */
+/* ─── 2) Stack every form-group + full width ─────────────────────────────── */
 #apply-form-container .form-horizontal .form-group {
   display: block !important;
   width: 100% !important;
   margin-bottom: 1.5rem !important;
 }
 
-/* ─── 3) Labels/legends above their controls ─────────────────────────────── */
+/* ─── 3) Labels & question-titles above their controls ────────────────────── */
 #apply-form-container .form-horizontal .form-group label.control-label,
 #apply-form-container form#applyForm legend.question-title {
   display: block !important;
@@ -28,7 +28,7 @@
   text-align: left !important;
 }
 
-/* ─── 4) All inputs, selects, textareas & dropdown-toggles fill 100% ────── */
+/* ─── 4) All inputs, selects, textareas & dropdown-toggles full-width ───── */
 #apply-form-container .form-horizontal .form-group .col-xs-12.col-sm-9,
 #apply-form-container form#applyForm input.form-control,
 #apply-form-container form#applyForm textarea.form-control,
@@ -48,7 +48,7 @@
   margin-top: 0.25rem !important;
 }
 
-/* ─── 6) Submit button full-width & centered ────────────────────────────── */
+/* ─── 6) Submit button full-width ───────────────────────────────────────── */
 #apply-form-container .form-group.submit-button {
   text-align: center !important;
   margin-top: 2rem !important;
@@ -58,66 +58,30 @@
   width: 100% !important;
 }
 
-/* ─── 7) FLUSH “Applicant Information” & its questions LEFT
-      leaving a 25% blank gutter on the RIGHT ───────────────────────────── */
+/* ─── 7) Remove Bootstrap col-sm-offset on the questionnaire wrapper ─────── */
 @media (min-width: 768px) {
-  /* Questionnaire wrapper */
   form#applyForm
     .form-group.form-group-questionnaires
-    > .col-xs-12,
-  /* Header */
+    > .col-sm-9.col-sm-offset-3 {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
+/* ─── 8) Flush “Applicant Information” & its questions LEFT,
+        leaving a 25% blank gutter on the right ───────────────────────────── */
+@media (min-width: 768px) {
   form#applyForm .questionnaire-header,
-  /* Questions list & each question */
   form#applyForm .questions,
   form#applyForm .questions .question {
-    /* zero out any left offset */
     margin-left: 0 !important;
-    /* add blank space to right */
     margin-right: 25% !important;
-    /* content spans the remaining 75% */
     width: 75% !important;
     float: none !important;
   }
 }
 
-/* ─── 8) On mobile, revert questionnaire back to full width ────────────── */
-@media (max-width: 767px) {
-  form#applyForm
-    .form-group.form-group-questionnaires
-    > .col-xs-12,
-  form#applyForm .questionnaire-header,
-  form#applyForm .questions,
-  form#applyForm .questions .question {
-    margin: 0 !important;
-    width: 100% !important;
-  }
-}
-
-/* ─── 1) Remove the built-in col-sm-offset-3 on the questionnaire block ───────── */
-@media (min-width: 768px) {
-  form#applyForm
-    .form-group.form-group-questionnaires
-    > .col-sm-9.col-sm-offset-3 {
-    /* reset the Bootstrap offset */
-    margin-left: 0 !important;
-    /* let it span full width of its container */
-    width: 100% !important;
-  }
-}
-
-/* ─── 2) Now flush “Applicant Information” & its questions LEFT
-        and leave 25% blank on the RIGHT ───────────────────────────────── */
-@media (min-width: 768px) {
-  form#applyForm .questionnaire-header,
-  form#applyForm .questions,
-  form#applyForm .questions .question {
-    margin-left: 0 !important;      /* hug the left edge */
-    margin-right: 25% !important;   /* blank 25% gutter on the right */
-    width: 75% !important;          /* content takes the remaining 75% */
-  }
-}
-
-/* ─── 3) Mobile: full width again ───────────────────────────────────────────── */
+/* ─── 9) On mobile, revert back to full-width ───────────────────────────── */
 @media (max-width: 767px) {
   form#applyForm .questionnaire-header,
   form#applyForm .questions,
@@ -126,4 +90,3 @@
     width: 100% !important;
   }
 }
-
