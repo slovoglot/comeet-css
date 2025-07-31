@@ -1,12 +1,11 @@
 /* ==========================================================================
-   Full-Width, Flush-Left Comeet Embed Overrides (comeet-custom.css)
+   Comeet Embed – 100% Width & Labels on Top (comeet-custom.css)
    ========================================================================== */
 
-/* 1) Embed container & typography */
-#apply-form-container,
+/* 1) Root container & typography */
 .form-container,
-#jobFormDiv,
-form#applyForm {
+form#applyForm,
+#jobFormDiv {
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
@@ -14,19 +13,7 @@ form#applyForm {
   font-family: 'Satoshi', sans-serif !important;
 }
 
-/* 2) Restore spacing for headings & paragraphs inside the form */
-#apply-form-container h1,
-#apply-form-container h2,
-#apply-form-container h3,
-#apply-form-container h4,
-#apply-form-container h5,
-#apply-form-container h6,
-#apply-form-container p {
-  margin: 1rem 0 !important;
-  padding: 0 !important;
-}
-
-/* 3) Override Bootstrap grid columns to full width */
+/* 2) Reset Bootstrap grid columns to full width */
 .col-xs-12,
 .col-sm-3,
 .col-sm-9 {
@@ -34,7 +21,7 @@ form#applyForm {
   float: none !important;
 }
 
-/* 4) Make each form-group full-width and stack vertically */
+/* 3) Make each field-group a full-width block */
 .form-group {
   display: block !important;
   width: 100% !important;
@@ -42,7 +29,7 @@ form#applyForm {
   margin: 1.5rem 0 !important;
 }
 
-/* 5) Labels above their controls */
+/* 4) Stack labels above controls */
 .form-group label {
   display: block !important;
   width: 100% !important;
@@ -50,7 +37,7 @@ form#applyForm {
   text-align: left !important;
 }
 
-/* 6) Inputs, textareas & selects fill 100% */
+/* 5) Inputs, textareas, and selects fill the width */
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -59,7 +46,7 @@ form#applyForm {
   margin: 0 !important;
 }
 
-/* 7) Style “Attach” links for file fields */
+/* 6) Style “Attach” links under file fields */
 .form-group.field-resume a,
 .form-group.field-cover-letter a,
 .form-group.field-portfolio a {
@@ -67,17 +54,17 @@ form#applyForm {
   margin-top: 0.25rem !important;
 }
 
-/* 8) Center & style the submit button */
+/* 7) Center & full-width submit button */
 .form-group.submit-button {
   text-align: center !important;
   margin-top: 2rem !important;
 }
 .form-group.submit-button button {
-  font-family: 'Satoshi', sans-serif !important;
   width: 100% !important;
+  font-family: 'Satoshi', sans-serif !important;
 }
 
-/* 9) Flush-left “Applicant Information” and all subsequent questionnaire elements */
+/* 8) Flush-left “Applicant Information” + all subsequent questions */
 .form-group.form-group-questionnaires,
 .form-group.form-group-questionnaires > .col-xs-12,
 .questionnairesWidget,
