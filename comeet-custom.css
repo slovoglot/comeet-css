@@ -1,92 +1,91 @@
-/* ------------------------------------------------------------
-   Fresh Comeet Embed Overrides (comeet-custom.css)
-   ------------------------------------------------------------ */
+/* ==========================================================================
+   Comeet Embed – Full-Width Overrides (comeet-custom.css)
+   ========================================================================== */
 
-/* 1) Root container & typography */
+/* 1) Ensure the embed container spans 100% of its parent */
+#apply-form-container,
 .form-container,
 form#applyForm,
 #jobFormDiv {
-  font-family: 'Satoshi', sans-serif !important;
-  max-width: 900px !important;
+  width: 100% !important;
+  max-width: none !important;
   margin: 0 auto !important;
   padding: 0 !important;
 }
 
-/* 2) Headings & paragraphs inside form */
-.form-container p,
-.form-container h1, .form-container h2, .form-container h3,
-.form-container h4, .form-container h5, .form-container h6 {
-  margin: 1rem 0 !important;
-  padding: 0 !important;
-}
-
-/* 3) Stack every field-group vertically & full-width */
-.form-container .form-group {
+/* 2) Make every field-group a full-width block */
+.form-container .form-group,
+#jobFormDiv .form-group,
+form#applyForm .form-group {
   display: block !important;
   width: 100% !important;
   clear: both !important;
   margin: 1.5rem 0 !important;
 }
 
-/* 4) Labels above controls */
-.form-container .form-group label {
+/* 3) Force all labels to occupy full width */
+.form-container .form-group label,
+#jobFormDiv .form-group label,
+form#applyForm .form-group label {
   display: block !important;
+  width: 100% !important;
   margin-bottom: 0.5rem !important;
   text-align: left !important;
 }
 
-/* 5) Inputs & textareas span 100% */
+/* 4) Inputs, textareas, selects span 100% */
 .form-container .form-group input,
-.form-container .form-group textarea {
+.form-container .form-group textarea,
+.form-container .form-group select,
+#jobFormDiv .form-group input,
+#jobFormDiv .form-group textarea,
+#jobFormDiv .form-group select,
+form#applyForm .form-group input,
+form#applyForm .form-group textarea,
+form#applyForm .form-group select {
+  display: block !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
-/* 6) “Attach” links under Resume/Cover/Portfolio */
-.form-container .form-group.field-resume a,
-.form-container .form-group.field-cover-letter a,
-.form-container .form-group.field-portfolio a {
-  display: inline-block !important;
-  margin-top: 0.25rem !important;
-}
-
-/* 7) Submit button styling */
-.form-container .form-group.submit-button {
-  text-align: center !important;
-  margin-top: 2rem !important;
-}
-.form-container .form-group.submit-button button {
-  font-family: 'Satoshi', sans-serif !important;
-}
-
-/* 8) Questionnaire block (“Applicant Information”) alignment */
-.form-container .form-group.form-group-questionnaires {
-  margin: 0 !important;
-  width: 100% !important;
-  padding-top: 2rem !important;
-}
-
-/* === Stack labels over controls === */
-#jobFormDiv .form-group,
-form#applyForm.form-horizontal .form-group {
-  display: block !important;
-  width: 100% !important;
-  clear: both !important;
-  margin-bottom: 1.5rem !important;
-}
-
-#jobFormDiv .form-group label,
-form#applyForm.form-horizontal .form-group label {
-  display: block !important;
-  width: 100% !important;
-  margin-bottom: 0.5rem !important;
-  text-align: left !important;
-}
-
-/* Ensure the control column spans full width */
-#jobFormDiv .col-xs-12.col-sm-9,
-form#applyForm.form-horizontal .col-xs-12.col-sm-9 {
+/* 5) Override Bootstrap grid columns to full width */
+.col-xs-12,
+.col-sm-3,
+.col-sm-9 {
   width: 100% !important;
   float: none !important;
 }
 
+/* 6) Make dropdown containers and options full width */
+.form-container .dropdown,
+#jobFormDiv .dropdown,
+form#applyForm .dropdown,
+.form-container .option-title,
+#jobFormDiv .option-title,
+form#applyForm .option-title,
+.form-container .option-description,
+#jobFormDiv .option-description,
+form#applyForm .option-description {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 7) Questionnaire section full width */
+.form-container .form-group-questionnaires,
+#jobFormDiv .form-group-questionnaires,
+form#applyForm .form-group-questionnaires {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 8) Submit button and other buttons full width */
+.form-container .form-group.submit-button button,
+#jobFormDiv .form-group.submit-button button,
+form#applyForm .form-group.submit-button button,
+.form-container button,
+#jobFormDiv button,
+form#applyForm button {
+  display: block !important;
+  width: 100% !important;
+}
