@@ -1,1 +1,63 @@
+/* ===================================================================
+   comeet-custom.css
+   Embed: 75% width + 25% right gutter, labels on top, full‐width fields
+   =================================================================== */
+
+/* 1) Root embed container + form */
+#apply-form-container,
+#apply-form-container .form-container,
+#apply-form-container #jobFormDiv,
+#apply-form-container form#applyForm {
+  width: 75% !important;           /* fill 75% of parent */
+  max-width: 75% !important;
+  margin: 0 25% 0 0 !important;    /* leave 25% empty on right */
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  font-family: 'Satoshi', sans-serif !important;
+}
+
+/* 2) Make each field‐group a full‐width block */
+#apply-form-container .form-group {
+  display: block !important;
+  width: 100% !important;
+  clear: both !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* 3) Stack labels above their controls */
+#apply-form-container .form-group label {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 0.5rem !important;
+  text-align: left !important;
+}
+
+/* 4) Inputs, textareas & selects fill 100% */
+#apply-form-container .form-group input,
+#apply-form-container .form-group textarea,
+#apply-form-container .form-group select {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+/* 5) Style “Attach” links under file fields */
+#apply-form-container .form-group.field-resume a,
+#apply-form-container .form-group.field-cover-letter a,
+#apply-form-container .form-group.field-portfolio a {
+  display: inline-block !important;
+  margin-top: 0.25rem !important;
+}
+
+/* 6) Submit button – full width & centered */
+#apply-form-container .form-group.submit-button {
+  text-align: center !important;
+  margin-top: 2rem !important;
+}
+#apply-form-container .form-group.submit-button button {
+  display: block !important;
+  width: 100% !important;
+  font-family: 'Satoshi', sans-serif !important;
+}
 
