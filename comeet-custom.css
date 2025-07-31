@@ -154,3 +154,25 @@
     box-sizing: border-box     !important;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* EXTEND JUST THE “top‐of‐form” INPUTS 25% BEYOND THEIR CONTAINER RIGHTWARD  */
+/* ─────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  /* target only the “normal” form‐group inputs (not the questionnaire section) */
+  #applyForm .form-group:not(.form-group-questionnaires) {
+    /* allow children to overflow */
+    overflow: visible !important;
+  }
+  #applyForm .form-group:not(.form-group-questionnaires) .form-control,
+  #applyForm .form-group:not(.form-group-questionnaires) .dropdown-toggle,
+  #applyForm .form-group:not(.form-group-questionnaires) .inputFiles {
+    /* make them 125% wide and pull the extra 25% outside on the right */
+    display: block             !important;
+    width: 125%                !important;
+    max-width: none            !important;
+    margin: 0  -25% 0 0        !important;
+    box-sizing: border-box     !important;
+  }
+}
+
