@@ -164,3 +164,26 @@
     box-sizing: border-box    !important;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* 0) RELEASE THE WEBFLOW CONTAINER SO OUR EMBED CAN OVERFLOW                */
+/* ─────────────────────────────────────────────────────────────────────────── */
+.careers-page .w-container,
+.jobs-referral-code-embed {
+  /* remove width limits & padding */
+  max-width: none       !important;
+  width:     100%       !important;
+  padding:   0          !important;
+  overflow-x:visible    !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* 1) NOW LET THE IFRAME ITSELF GO 125% WIDE, FLUSH LEFT, SPILL RIGHT         */
+/* ─────────────────────────────────────────────────────────────────────────── */
+.jobs-referral-code-embed iframe.comeet-iframe {
+  width:      125%      !important;
+  min-width: 125%      !important;
+  margin:    0         !important;  /* keep it flush on the left */
+  overflow: visible    !important;
+}
+
