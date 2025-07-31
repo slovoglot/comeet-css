@@ -1,121 +1,48 @@
-/* ==========================================================================
-   comeet-custom.css
-   ========================================================================== */
-
-/* ─── 1) Embed container: center @ 900px + Satoshi ───────────────────────── */
-#apply-form-container,
-#apply-form-container .form-container,
-#apply-form-container form#applyForm {
-  max-width: 900px;
-  margin: 0 auto !important;
-  font-family: 'Satoshi', sans-serif !important;
-  box-sizing: border-box !important;
-}
-
-/* ─── 2) Stack every form-group + full width ─────────────────────────────── */
-#apply-form-container .form-horizontal .form-group {
-  display: block !important;
-  width: 100% !important;
-  margin-bottom: 1.5rem !important;
-}
-
-/* ─── 3) Labels & question-titles above their controls ────────────────────── */
-#apply-form-container .form-horizontal .form-group label.control-label,
-#apply-form-container form#applyForm legend.question-title {
-  display: block !important;
-  width: 100% !important;
-  margin-bottom: 0.5rem !important;
-  text-align: left !important;
-}
-
-/* ─── 4) All inputs, selects, textareas & dropdown-toggles full-width ───── */
-#apply-form-container .form-horizontal .form-group .col-xs-12.col-sm-9,
-#apply-form-container form#applyForm input.form-control,
-#apply-form-container form#applyForm textarea.form-control,
-#apply-form-container form#applyForm select.form-control,
-#apply-form-container form#applyForm .dropdown-toggle {
-  display: block !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  margin: 0 !important;
-}
-
-/* ─── 5) “Attach” links under file fields ───────────────────────────────── */
-#apply-form-container .form-group.field-resume a,
-#apply-form-container .form-group.field-cover-letter a,
-#apply-form-container .form-group.field-portfolio a {
-  display: inline-block !important;
-  margin-top: 0.25rem !important;
-}
-
-/* ─── 6) Submit button full-width ───────────────────────────────────────── */
-#apply-form-container .form-group.submit-button {
-  text-align: center !important;
-  margin-top: 2rem !important;
-}
-#apply-form-container .form-group.submit-button button {
-  display: block !important;
-  width: 100% !important;
-}
-
-/* ─── 7) Remove Bootstrap col-sm-offset on the questionnaire wrapper ─────── */
-@media (min-width: 768px) {
-  form#applyForm
-    .form-group.form-group-questionnaires
-    > .col-sm-9.col-sm-offset-3 {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-}
-
-/* ─── 8) Flush “Applicant Information” & its questions LEFT,
-        leaving a 25% blank gutter on the right ───────────────────────────── */
-@media (min-width: 768px) {
-  form#applyForm .questionnaire-header,
-  form#applyForm .questions,
-  form#applyForm .questions .question {
-    margin-left: 0 !important;
-    margin-right: 25% !important;
-    width: 75% !important;
-    float: none !important;
-  }
-}
-
-/* ─── 9) On mobile, revert back to full-width ───────────────────────────── */
-@media (max-width: 767px) {
-  form#applyForm .questionnaire-header,
-  form#applyForm .questions,
-  form#applyForm .questions .question {
-    margin: 0 !important;
-    width: 100% !important;
-  }
-}
-
-/* ─── Stack all Comeet labels and question‐titles on top ───────────────── */
-form#applyForm .form-group label.control-label,
-form#applyForm legend.question-title {
-  display: block        !important;  /* no floats */
-  width: 100%           !important;  /* fill the line */
-  float: none           !important;  /* override col-sm float */
-  margin-bottom: 0.5rem !important;  /* space to the control */
-  text-align: left      !important;  /* keep left-aligned text */
-}
-
-/* ─── Make every control full-width under its label ─────────────────────── */
-form#applyForm .form-group > [class*="col-"] {
-  width: 100%           !important;
+/* ─── 1) Make every label/legend block & full-width ─────────────────────────── */
+#applyForm .form-group .control-label,
+#applyForm legend.question-title {
+  display: block        !important;
   float: none           !important;
+  width: 100%           !important;
+  margin-bottom: 0.5rem !important;
+  text-align: left      !important;
+}
+
+/* ─── 2) Collapse all col-* wrappers to full-width under their label ──────── */
+#applyForm .form-group > [class*="col-"] {
+  float: none           !important;
+  width: 100%           !important;
+  padding: 0            !important;
   box-sizing: border-box!important;
 }
 
-/* ─── And ensure inputs/textareas/selects/dropdowns fill that 100% ────── */
-form#applyForm input.form-control,
-form#applyForm textarea.form-control,
-form#applyForm select.form-control,
-form#applyForm .dropdown-toggle {
+/* ─── 3) Stretch all actual controls to fill their container ───────────────── */
+#applyForm input.form-control,
+#applyForm textarea.form-control,
+#applyForm select.form-control,
+#applyForm .dropdown-toggle {
   display: block        !important;
   width: 100%           !important;
+  margin: 0             !important;
   box-sizing: border-box!important;
+}
+
+/* ─── 4) Specifically flatten the questionnaire wrapper so it has no offset ─ */
+#applyForm .form-group.form-group-questionnaires .col-xs-12.col-sm-9.col-sm-offset-3 {
+  float: none           !important;
+  width: 100%           !important;
+  margin: 0             !important;
+  padding: 0            !important;
+}
+
+/* ─── 5) Flatten the inner questionnaire containers too ────────────────────── */
+#applyForm .questionnaire,
+#applyForm .questionnaire-header,
+#applyForm .questions,
+#applyForm .questions .question {
+  float: none           !important;
+  width: 100%           !important;
+  padding: 0            !important;
   margin: 0             !important;
 }
 
