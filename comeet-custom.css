@@ -1,54 +1,51 @@
-/* 1. Form root: use Satoshi everywhere in the form */
-#jobFormDiv {
+/* 1. Root the override to the standalone form */
+.form-container,
+form#applyForm {
   font-family: 'Satoshi', sans-serif !important;
 }
 
-/* 2. Undo the “zero‐margin” reset on p, h1–h6 inside the form */
-#jobFormDiv p,
-#jobFormDiv h1,
-#jobFormDiv h2,
-#jobFormDiv h3,
-#jobFormDiv h4,
-#jobFormDiv h5,
-#jobFormDiv h6 {
+/* 2. Undo any zero-margin resets on headings/paras inside the form */
+form#applyForm p,
+form#applyForm h1,
+form#applyForm h2,
+form#applyForm h3,
+form#applyForm h4,
+form#applyForm h5,
+form#applyForm h6 {
   margin: 1rem 0 !important;
-  padding: 0 !important;
 }
 
-/* 3. Force a vertical, full-width layout for each field group */
-#jobFormDiv .form-group {
+/* 3. Full-width vertical layout for every field group */
+form#applyForm .form-group {
   display: block !important;
   width: 100% !important;
   float: none !important;
-  margin: 1.5rem 0 !important; /* space between fields */
+  margin: 1.5rem 0 !important;
 }
 
-/* 4. Put each label on its own line above the control */
-#jobFormDiv .form-group label {
+/* 4. Labels above inputs */
+form#applyForm .form-group label {
   display: block !important;
   margin-bottom: 0.5rem !important;
   text-align: left !important;
 }
 
-/* 5. Make inputs & textareas span the full width */
-#jobFormDiv .form-group input,
-#jobFormDiv .form-group textarea {
+/* 5. Inputs & textareas fill 100% */
+form#applyForm .form-group input,
+form#applyForm .form-group textarea {
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
-/* 6. Tidy up the “Attach Resume/Cover Letter” links */
-#jobFormDiv .form-group.field-resume a,
-#jobFormDiv .form-group.field-cover-letter a {
-  display: inline-block !important;
+/* 6. Tidy Attach links */
+form#applyForm .form-group.field-resume a,
+form#applyForm .form-group.field-cover-letter a {
   margin-top: 0.25rem !important;
+  display: inline-block !important;
 }
 
-/* 7. Center & space the submit button */
-#jobFormDiv .form-group.submit-button {
+/* 7. Center & space submit */
+form#applyForm .form-group.submit-button {
   text-align: center !important;
   margin-top: 2rem !important;
-}
-#jobFormDiv .form-group.submit-button button {
-  font-family: 'Satoshi', sans-serif !important;
 }
