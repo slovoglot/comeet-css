@@ -1,44 +1,94 @@
-/* ─── Indent Applicant Information & all its questions by 25% ───────── */
+/* ==========================================================================
+   comeet-custom.css – Full form styling + flush-left questionnaire gutter
+   ========================================================================== */
+
+/* ─── 1) Center the embed & set font ─────────────────────────────────────── */
+#apply-form-container,
+#apply-form-container .form-container,
+#apply-form-container form#applyForm {
+  max-width: 900px;
+  margin: 0 auto !important;
+  font-family: 'Satoshi', sans-serif !important;
+  box-sizing: border-box;
+}
+
+/* ─── 2) Stack each form-group vertically & full-width ───────────────────── */
+#apply-form-container .form-horizontal .form-group {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* ─── 3) Labels/legends above their controls ─────────────────────────────── */
+#apply-form-container .form-horizontal .form-group label.control-label,
+#apply-form-container form#applyForm legend.question-title {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 0.5rem !important;
+  text-align: left !important;
+}
+
+/* ─── 4) All inputs, selects, textareas & dropdown-toggles fill 100% ────── */
+#apply-form-container .form-horizontal .form-group .col-xs-12.col-sm-9,
+#apply-form-container form#applyForm input.form-control,
+#apply-form-container form#applyForm textarea.form-control,
+#apply-form-container form#applyForm select.form-control,
+#apply-form-container form#applyForm .dropdown-toggle {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+/* ─── 5) “Attach” links under file fields ───────────────────────────────── */
+#apply-form-container .form-group.field-resume a,
+#apply-form-container .form-group.field-cover-letter a,
+#apply-form-container .form-group.field-portfolio a {
+  display: inline-block !important;
+  margin-top: 0.25rem !important;
+}
+
+/* ─── 6) Submit button full-width & centered ────────────────────────────── */
+#apply-form-container .form-group.submit-button {
+  text-align: center !important;
+  margin-top: 2rem !important;
+}
+#apply-form-container .form-group.submit-button button {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* ─── 7) FLUSH “Applicant Information” & its questions LEFT
+      leaving a 25% blank gutter on the RIGHT ───────────────────────────── */
 @media (min-width: 768px) {
-  /* 1) The wrapper around the questionnaires */
+  /* Questionnaire wrapper */
   form#applyForm
     .form-group.form-group-questionnaires
-    > .col-xs-12 {
-    margin-left: 25% !important;
+    > .col-xs-12,
+  /* Header */
+  form#applyForm .questionnaire-header,
+  /* Questions list & each question */
+  form#applyForm .questions,
+  form#applyForm .questions .question {
+    /* zero out any left offset */
+    margin-left: 0 !important;
+    /* add blank space to right */
+    margin-right: 25% !important;
+    /* content spans the remaining 75% */
     width: 75% !important;
-  }
-
-  /* 2) The “Applicant Information” header itself */
-  form#applyForm
-    .questionnaire-header {
-    margin-left: 25% !important;
-    width: 75% !important;
-  }
-
-  /* 3) The questions list and each question */
-  form#applyForm
-    .questions,
-  form#applyForm
-    .questions
-    .question {
-    margin-left: 25% !important;
-    width: 75% !important;
+    float: none !important;
   }
 }
 
-/* On mobile, revert back to full width */
+/* ─── 8) On mobile, revert questionnaire back to full width ────────────── */
 @media (max-width: 767px) {
   form#applyForm
     .form-group.form-group-questionnaires
     > .col-xs-12,
-  form#applyForm
-    .questionnaire-header,
-  form#applyForm
-    .questions,
-  form#applyForm
-    .questions
-    .question {
-    margin-left: 0 !important;
+  form#applyForm .questionnaire-header,
+  form#applyForm .questions,
+  form#applyForm .questions .question {
+    margin: 0 !important;
     width: 100% !important;
   }
 }
