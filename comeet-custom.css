@@ -90,3 +90,32 @@
     width: 100% !important;
   }
 }
+
+/* ─── Stack all Comeet labels and question‐titles on top ───────────────── */
+form#applyForm .form-group label.control-label,
+form#applyForm legend.question-title {
+  display: block        !important;  /* no floats */
+  width: 100%           !important;  /* fill the line */
+  float: none           !important;  /* override col-sm float */
+  margin-bottom: 0.5rem !important;  /* space to the control */
+  text-align: left      !important;  /* keep left-aligned text */
+}
+
+/* ─── Make every control full-width under its label ─────────────────────── */
+form#applyForm .form-group > [class*="col-"] {
+  width: 100%           !important;
+  float: none           !important;
+  box-sizing: border-box!important;
+}
+
+/* ─── And ensure inputs/textareas/selects/dropdowns fill that 100% ────── */
+form#applyForm input.form-control,
+form#applyForm textarea.form-control,
+form#applyForm select.form-control,
+form#applyForm .dropdown-toggle {
+  display: block        !important;
+  width: 100%           !important;
+  box-sizing: border-box!important;
+  margin: 0             !important;
+}
+
