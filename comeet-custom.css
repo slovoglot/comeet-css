@@ -109,4 +109,26 @@ form#applyForm h3.questionnaire-name ~ * {
   margin: 0 auto !important;
 }
 
+/* ==========================================================================
+   8) Align the questionnaire block under the input column
+   ========================================================================== */
+/* For mobile and up, indent by the width of the label column (col-sm-3 = 25%) */
+@media (min-width: 576px) {
+  form#applyForm .form-group.form-group-questionnaires,
+  #jobFormDiv .form-group.form-group-questionnaires {
+    margin-left: 25% !important;
+    max-width: 75% !important;   /* keep it in the same “control” column width */
+  }
+}
+
+/* On very small screens we want full width */
+@media (max-width: 575px) {
+  form#applyForm .form-group.form-group-questionnaires,
+  #jobFormDiv .form-group.form-group-questionnaires {
+    margin-left: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+
 
