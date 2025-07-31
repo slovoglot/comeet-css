@@ -1,4 +1,4 @@
-/* ─────────────────────────────────────────────────────────────────────────── */
+full code with last changes implemented in here: /* ─────────────────────────────────────────────────────────────────────────── */
 /* 0) FULL-WIDTH top-of-form fields (First name / Last name / etc)            */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
@@ -6,7 +6,7 @@
   #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-3"],
   #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-9"] {
     float: none                !important;
-    width: 100%                !important;
+    width: 125%                !important;
     margin: 0                  !important;
     padding: 0                 !important;
     box-sizing: border-box     !important;
@@ -86,7 +86,6 @@
     width: 100%                !important;
     text-align: left           !important;
     margin-bottom: 1rem        !important;
-    box-sizing: border-box     !important;
   }
 
   /* And the “expand questionnaire” links under the form */
@@ -96,7 +95,6 @@
     margin: 1rem 0 0 0         !important;
     padding: 0                 !important;
     list-style: none           !important;
-    box-sizing: border-box     !important;
   }
   #applyForm ul.questionnairesLinks li {
     margin: 0                  !important;
@@ -147,31 +145,12 @@
     box-sizing: border-box     !important;
   }
 }
+
 @media (max-width: 767px) {
   #applyForm .dropdown.left .dropdown-toggle,
   #applyForm .dropdown.left .dropdown-menu {
     display: block             !important;
     width: 100%                !important;
     box-sizing: border-box     !important;
-  }
-}
-
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* 6) EXTEND “Applicant Information” + its fields 25% beyond the form        */
-/* ─────────────────────────────────────────────────────────────────────────── */
-@media (min-width: 768px) {
-  /* extend the entire questionnaire block */
-  #applyForm .questionnaire,
-  #applyForm .questions,
-  #applyForm .questions .question {
-    width: 125%               !important;
-  }
-  /* extend every control inside it */
-  #applyForm .questions .question input.form-control,
-  #applyForm .questions .question textarea.form-control,
-  #applyForm .questions .question select.form-control,
-  #applyForm .questions .question .dropdown-toggle,
-  #applyForm .questions .question .inputFiles {
-    width: 125%               !important;
   }
 }
