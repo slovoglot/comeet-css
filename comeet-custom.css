@@ -128,3 +128,29 @@
     box-sizing: border-box     !important;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* 5) Ensure the Comeet dropdowns/select-toggles also go full-width          */
+/* ─────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  /* the “Choose” toggle in each questionnaire field */
+  #applyForm .dropdown.left .dropdown-toggle {
+    display: block             !important;
+    width: 100%                !important;
+    box-sizing: border-box     !important;
+  }
+  /* and when the menu drops down, make it full width, too */
+  #applyForm .dropdown.left .dropdown-menu {
+    width: 100%                !important;
+    box-sizing: border-box     !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #applyForm .dropdown.left .dropdown-toggle,
+  #applyForm .dropdown.left .dropdown-menu {
+    display: block             !important;
+    width: 100%                !important;
+    box-sizing: border-box     !important;
+  }
+}
