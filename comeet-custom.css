@@ -1,78 +1,68 @@
-/* ==========================================================================
-   comeet-custom.css – Full solution
-   ========================================================================== */
-
-/* ─── 1) Center the embed & set font ─────────────────────────────────────── */
+/* ─── 1) Flush the form to the left ─────────────────────────────────────── */
 #apply-form-container,
 #apply-form-container .form-container,
+#apply-form-container #jobFormDiv,
 #apply-form-container form#applyForm {
-  max-width: 900px;
-  margin: 0 auto !important;
-  font-family: 'Satoshi', sans-serif !important;
-  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* ─── 2) Stack all form-groups vertically & full width ─────────────────── */
-#apply-form-container .form-horizontal .form-group {
+/* ─── 2) (Optional) keep your 900px max-width but still left-aligned ───── */
+#apply-form-container form#applyForm {
+  max-width: 900px !important;
+  width: 100% !important;
+}
+
+/* ─── 3) Rest of your CSS for stacking labels/inputs etc. ────────────── */
+.form-horizontal .form-group {
   display: block !important;
   width: 100% !important;
   margin-bottom: 1.5rem !important;
 }
-
-/* ─── 3) Labels above controls ──────────────────────────────────────────── */
-#apply-form-container .form-horizontal .form-group label.control-label {
+.form-horizontal .form-group label.control-label {
   display: block !important;
   width: 100% !important;
   margin-bottom: 0.5rem !important;
   text-align: left !important;
 }
 
-/* ─── 4) Make every “control” column & input fill 100% ─────────────────── */
-#apply-form-container .form-horizontal .form-group .col-xs-12.col-sm-9,
-#apply-form-container form#applyForm input.form-control,
-#apply-form-container form#applyForm textarea.form-control,
-#apply-form-container form#applyForm select.form-control {
+.form-horizontal .form-group .col-xs-12.col-sm-9,
+form#applyForm input.form-control,
+form#applyForm textarea.form-control,
+form#applyForm select.form-control,
+form#applyForm .dropdown-toggle {
+  display: block !important;
   width: 100% !important;
-  float: none !important;
   box-sizing: border-box !important;
   margin: 0 !important;
 }
 
-/* ─── 5) Style “Attach” links under file fields ────────────────────────── */
-#apply-form-container .form-group.field-resume a,
-#apply-form-container .form-group.field-cover-letter a,
-#apply-form-container .form-group.field-portfolio a {
+.form-group.field-resume a,
+.form-group.field-cover-letter a,
+.form-group.field-portfolio a {
   display: inline-block !important;
   margin-top: 0.25rem !important;
 }
 
-/* ─── 6) Full-width submit button ──────────────────────────────────────── */
-#apply-form-container .form-group.submit-button {
+.form-group.submit-button {
   text-align: center !important;
   margin-top: 2rem !important;
 }
-#apply-form-container .form-group.submit-button button {
+.form-group.submit-button button {
   display: block !important;
   width: 100% !important;
 }
 
-/* ─── 7) INDENT the Questionnaire block by 25% on desktop ─────────────── */
+/* Indent the questionnaire only (Applicant Information onward) */
 @media (min-width: 768px) {
-  /* Only indent the wrapper — everything inside lines up automatically */
-  #apply-form-container
-    .form-group.form-group-questionnaires
-    > .col-xs-12 {
+  form#applyForm .form-group.form-group-questionnaires > .col-xs-12 {
     margin-left: 25% !important;
     width: 75% !important;
     float: none !important;
   }
 }
-
-/* ─── 8) Revert to full width on mobile ────────────────────────────────── */
 @media (max-width: 767px) {
-  #apply-form-container
-    .form-group.form-group-questionnaires
-    > .col-xs-12 {
+  form#applyForm .form-group.form-group-questionnaires > .col-xs-12 {
     margin-left: 0 !important;
     width: 100% !important;
   }
