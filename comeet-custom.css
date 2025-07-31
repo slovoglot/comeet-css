@@ -1,22 +1,16 @@
-/* ─── 1) Make every label/legend block & full-width ─────────────────────────── */
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* 1) Stack every field’s label/legend full-width on top of its input/etc.  */
+/* ─────────────────────────────────────────────────────────────────────────── */
 #applyForm .form-group .control-label,
 #applyForm legend.question-title {
   display: block        !important;
   float: none           !important;
   width: 100%           !important;
-  margin-bottom: 0.5rem !important;
+  margin-bottom: .5rem  !important;
   text-align: left      !important;
 }
 
-/* ─── 2) Collapse all col-* wrappers to full-width under their label ──────── */
-#applyForm .form-group > [class*="col-"] {
-  float: none           !important;
-  width: 100%           !important;
-  padding: 0            !important;
-  box-sizing: border-box!important;
-}
-
-/* ─── 3) Stretch all actual controls to fill their container ───────────────── */
+/* Stretch all form controls to 100% */
 #applyForm input.form-control,
 #applyForm textarea.form-control,
 #applyForm select.form-control,
@@ -27,22 +21,70 @@
   box-sizing: border-box!important;
 }
 
-/* ─── 4) Specifically flatten the questionnaire wrapper so it has no offset ─ */
-#applyForm .form-group.form-group-questionnaires .col-xs-12.col-sm-9.col-sm-offset-3 {
+/* Collapse any Bootstrap column wrappers under each label */
+#applyForm .form-group > [class*="col-"] {
   float: none           !important;
   width: 100%           !important;
-  margin: 0             !important;
   padding: 0            !important;
+  box-sizing: border-box!important;
 }
 
-/* ─── 5) Flatten the inner questionnaire containers too ────────────────────── */
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* 2) Flatten the “Applicant Information” section to full width             */
+/* ─────────────────────────────────────────────────────────────────────────── */
+#applyForm .form-group.form-group-questionnaires .col-xs-12.col-sm-9.col-sm-offset-3,
 #applyForm .questionnaire,
 #applyForm .questionnaire-header,
 #applyForm .questions,
 #applyForm .questions .question {
   float: none           !important;
   width: 100%           !important;
-  padding: 0            !important;
   margin: 0             !important;
+  padding: 0            !important;
 }
 
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* 3) Also flatten privacy notice, apply button & questionnaire-links below  */
+/* ─────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  /* Privacy link wrapper */
+  #applyForm .privacy-policy-1 .col-xs-12.col-sm-9.col-sm-offset-3,
+  /* Apply-now button wrapper */
+  #applyForm .submit-button .col-xs-12.col-sm-9.col-sm-offset-3 {
+    float: none           !important;
+    width: 100%           !important;
+    margin: 0             !important;
+    padding: 0            !important;
+  }
+
+  /* Make the privacy text left-aligned full width */
+  #applyForm .privacyPolicy {
+    width: 100%           !important;
+    text-align: left      !important;
+    margin-bottom: 1rem   !important;
+  }
+
+  /* The little “expand questionnaire” links under the form */
+  #applyForm ul.questionnairesLinks {
+    float: none           !important;
+    width: 100%           !important;
+    margin: 1rem 0 0 0    !important;
+    padding: 0            !important;
+    list-style: none      !important;
+  }
+  #applyForm ul.questionnairesLinks li {
+    margin: 0 !important;
+  }
+}
+
+/* On mobile revert everything to full width (no offsets) */
+@media (max-width: 767px) {
+  #applyForm .privacy-policy-1 .col-xs-12.col-sm-9.col-sm-offset-3,
+  #applyForm .submit-button .col-xs-12.col-sm-9.col-sm-offset-3,
+  #applyForm ul.questionnairesLinks {
+    float: none           !important;
+    width: 100%           !important;
+    margin: 0             !important;
+    padding: 0            !important;
+  }
+}
