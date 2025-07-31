@@ -1,6 +1,7 @@
 /* ===================================================================
    comeet-custom.css
-   Embed: 75% width + 25% right gutter, labels on top, full‐width fields
+   Embed: 75% width + 25% right gutter, labels on top, full-width fields,
+   and 25% left indent for “Applicant Information” onward
    =================================================================== */
 
 /* 1) Root embed container + form */
@@ -16,7 +17,7 @@
   font-family: 'Satoshi', sans-serif !important;
 }
 
-/* 2) Make each field‐group a full‐width block */
+/* 2) Make each field-group a full-width block */
 #apply-form-container .form-group {
   display: block !important;
   width: 100% !important;
@@ -50,7 +51,7 @@
   margin-top: 0.25rem !important;
 }
 
-/* 6) Submit button – full width & centered */
+/* 6) Submit button – full width */
 #apply-form-container .form-group.submit-button {
   text-align: center !important;
   margin-top: 2rem !important;
@@ -61,3 +62,8 @@
   font-family: 'Satoshi', sans-serif !important;
 }
 
+/* 7) Indent “Applicant Information” section & all following elements by 25% */
+#apply-form-container h3.questionnaire-name,
+#apply-form-container h3.questionnaire-name ~ * {
+  margin-left: 25% !important;
+}
