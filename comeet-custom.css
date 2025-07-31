@@ -1,91 +1,96 @@
-/* ===================================================================
-   Fresh Comeet Embed CSS: Stack Labels Above Their Inputs
-   =================================================================== */
+/* ==========================================================================
+   Full-Width, Flush-Left Comeet Embed Overrides (comeet-custom.css)
+   ========================================================================== */
 
 /* 1) Embed container & typography */
+#apply-form-container,
 .form-container,
-form#applyForm,
-#jobFormDiv {
+#jobFormDiv,
+form#applyForm {
   width: 100% !important;
   max-width: none !important;
-  margin: 0 auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
   font-family: 'Satoshi', sans-serif !important;
+}
+
+/* 2) Restore spacing for headings & paragraphs inside the form */
+#apply-form-container h1,
+#apply-form-container h2,
+#apply-form-container h3,
+#apply-form-container h4,
+#apply-form-container h5,
+#apply-form-container h6,
+#apply-form-container p {
+  margin: 1rem 0 !important;
   padding: 0 !important;
 }
 
-/* 2) Override Bootstrap grid so everything spans full width */
-.form-container .col-xs-12,
-.form-container .col-sm-3,
-.form-container .col-sm-9,
-#jobFormDiv .col-xs-12,
-#jobFormDiv .col-sm-3,
-#jobFormDiv .col-sm-9,
-form#applyForm .col-xs-12,
-form#applyForm .col-sm-3,
-form#applyForm .col-sm-9 {
+/* 3) Override Bootstrap grid columns to full width */
+.col-xs-12,
+.col-sm-3,
+.col-sm-9 {
   width: 100% !important;
   float: none !important;
 }
 
-/* 3) Make each field-group a column flex container */
-.form-container .form-group,
-#jobFormDiv .form-group,
-form#applyForm .form-group {
-  display: flex !important;
-  flex-direction: column !important;
+/* 4) Make each form-group full-width and stack vertically */
+.form-group {
+  display: block !important;
   width: 100% !important;
-  margin-bottom: 1.5rem !important;
+  clear: both !important;
+  margin: 1.5rem 0 !important;
 }
 
-/* 4) Labels sit above controls */
-.form-container .form-group label,
-#jobFormDiv .form-group label,
-form#applyForm .form-group label {
+/* 5) Labels above their controls */
+.form-group label {
   display: block !important;
+  width: 100% !important;
   margin-bottom: 0.5rem !important;
   text-align: left !important;
-  width: 100% !important;
 }
 
-/* 5) Inputs, textareas, selects fill the width */
-.form-container .form-group input,
-.form-container .form-group textarea,
-.form-container .form-group select,
-#jobFormDiv .form-group input,
-#jobFormDiv .form-group textarea,
-#jobFormDiv .form-group select,
-form#applyForm .form-group input,
-form#applyForm .form-group textarea,
-form#applyForm .form-group select {
+/* 6) Inputs, textareas & selects fill 100% */
+.form-group input,
+.form-group textarea,
+.form-group select {
   width: 100% !important;
   box-sizing: border-box !important;
   margin: 0 !important;
 }
 
-/* 6) Style “Attach” links under resume/cover-letter/portfolio */
-.form-container .form-group.field-resume a,
-.form-container .form-group.field-cover-letter a,
-.form-container .form-group.field-portfolio a,
-#jobFormDiv .form-group.field-resume a,
-#jobFormDiv .form-group.field-cover-letter a,
-#jobFormDiv .form-group.field-portfolio a,
-form#applyForm .form-group.field-resume a,
-form#applyForm .form-group.field-cover-letter a,
-form#applyForm .form-group.field-portfolio a {
+/* 7) Style “Attach” links for file fields */
+.form-group.field-resume a,
+.form-group.field-cover-letter a,
+.form-group.field-portfolio a {
   display: inline-block !important;
   margin-top: 0.25rem !important;
 }
 
-/* 7) Center & style the submit button */
-.form-container .form-group.submit-button,
-#jobFormDiv .form-group.submit-button,
-form#applyForm .form-group.submit-button {
-  align-items: center !important;
+/* 8) Center & style the submit button */
+.form-group.submit-button {
+  text-align: center !important;
+  margin-top: 2rem !important;
+}
+.form-group.submit-button button {
+  font-family: 'Satoshi', sans-serif !important;
+  width: 100% !important;
 }
 
-.form-container .form-group.submit-button button,
-#jobFormDiv .form-group.submit-button button,
-form#applyForm .form-group.submit-button button {
-  padding: 0.75rem 1.5rem !important;
-  font-family: 'Satoshi', sans-serif !important;
+/* 9) Flush-left “Applicant Information” and all subsequent questionnaire elements */
+.form-group.form-group-questionnaires,
+.form-group.form-group-questionnaires > .col-xs-12,
+.questionnairesWidget,
+.questionnaire,
+.questionnaire-header,
+h3.questionnaire-name,
+.question-header,
+.question-description.userDesignedContent.mediumText,
+.question-fineprint.mediumText,
+.dropdown.left,
+.option-title,
+.option-description.userDesignedContent.lightText {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  width: 100% !important;
 }
