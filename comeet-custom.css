@@ -1,13 +1,16 @@
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 1) STACK LABELS/FIELD‐TITLES FULL WIDTH ABOVE THEIR INPUTS               */
+/* 1) STACK LABELS & FIELD TITLES FULL‐WIDTH ABOVE THEIR INPUTS              */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
+  /* collapse any Bootstrap columns under each form-group */
   #applyForm .form-group > [class*="col-"] {
     float: none                !important;
     width: 100%                !important;
     padding: 0                 !important;
     box-sizing: border-box     !important;
   }
+
+  /* labels and question legends full width on their own line */
   #applyForm .form-group .control-label,
   #applyForm legend.question-title {
     display: block             !important;
@@ -16,6 +19,8 @@
     margin-bottom: .5rem       !important;
     text-align: left           !important;
   }
+
+  /* stretch all inputs/textareas/selects/dropdowns/files to full width */
   #applyForm input.form-control,
   #applyForm textarea.form-control,
   #applyForm select.form-control,
@@ -57,12 +62,14 @@
     padding: 0                 !important;
     box-sizing: border-box     !important;
   }
+
   #applyForm .privacyPolicy {
     width: 100%                !important;
     text-align: left           !important;
     margin-bottom: 1rem        !important;
     box-sizing: border-box     !important;
   }
+
   #applyForm ul.questionnairesLinks {
     float: none                !important;
     width: 100%                !important;
@@ -108,7 +115,7 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 5) DROPDOWNS / SELECTs FULL‐WIDTH                                          */
+/* 5) DROPDOWNS / SELECTs FULL-WIDTH                                          */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
   #applyForm .dropdown.left .dropdown-toggle {
@@ -126,7 +133,7 @@
 /* 6) SPILL 25% ON ONLY THE FIRST 4 ROWS (First/Last name, Email, Phone)      */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  /* exactly those four fields’ right-hand columns */
+  /* target just those four fields’ right-hand columns */
   #applyForm .form-group.field-first-name > .col-xs-12.col-sm-9,
   #applyForm .form-group.field-last-name  > .col-xs-12.col-sm-9,
   #applyForm .form-group.field-email      > .col-xs-12.col-sm-9,
@@ -134,6 +141,7 @@
     width:      125% !important;
     max-width:  none !important;
     box-sizing: border-box !important;
+    overflow:   visible    !important;
   }
 }
 
@@ -148,6 +156,7 @@
   padding:   0          !important;
   overflow-x: visible   !important;
 }
+
 .jobs-referral-code-embed iframe.comeet-iframe {
   width:      125%      !important;
   min-width:  125%      !important;
