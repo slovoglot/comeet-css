@@ -149,16 +149,17 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 6) RELEASE WEBFLOW’S CONTAINER & LET IFRAME SPILL                        */
+/* 6) SPILL 25% ONLY THE FIRST 4 FIELDS (name / email / phone)                */
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* remove Webflow’s fixed container constraints so overflow can show */
-.careers-page .w-container,
-.jobs-referral-code-embed {
-  max-width: none       !important;
-  width:     100%       !important;
-  padding-left: 0       !important;
-  padding-right: 0      !important;
-  overflow-x: visible   !important;
+@media (min-width: 768px) {
+  /* only “First name”, “Last name”, “Email” & “Phone” go 125% wide */
+  #applyForm .form-group.field-first-name    > .col-xs-12.col-sm-9,
+  #applyForm .form-group.field-last-name     > .col-xs-12.col-sm-9,
+  #applyForm .form-group.field-email         > .col-xs-12.col-sm-9,
+  #applyForm .form-group.field-phone         > .col-xs-12.col-sm-9 {
+    width: 125%               !important;
+    box-sizing: border-box    !important;
+  }
 }
 /* if your theme uses section to clip overflow */
 .careers-page section {
