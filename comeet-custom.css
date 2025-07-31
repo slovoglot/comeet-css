@@ -49,3 +49,10 @@ form#applyForm .form-group.submit-button {
   text-align: center !important;
   margin-top: 2rem !important;
 }
+
+/* from “Applicant Information” onward */
+form#applyForm h3.questionnaire-name,
+form#applyForm h3.questionnaire-name ~ * {
+  padding-right: 100px !important;
+}
+
