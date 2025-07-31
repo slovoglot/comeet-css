@@ -1,15 +1,14 @@
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 0) EXTEND TOP-OF-FORM INPUTS 25% WIDER (First name / Last name / etc.)     */
+/* 0) FULL-WIDTH top-of-form fields (First name / Last name / etc)            */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  /* target the actual input / textarea / select / dropdown / file fields
-     * immediately under each form-group at the top of #applyForm */
-  #applyForm > .form-group input.form-control,
-  #applyForm > .form-group textarea.form-control,
-  #applyForm > .form-group select.form-control,
-  #applyForm > .form-group .dropdown-toggle,
-  #applyForm > .form-group .inputFiles {
+  /* collapse the two-column wrappers for all form-group sections */
+  #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-3"],
+  #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-9"] {
+    float: none                !important;
     width: 125%                !important;
+    margin: 0                  !important;
+    padding: 0                 !important;
     box-sizing: border-box     !important;
   }
 }
@@ -36,7 +35,7 @@
     text-align: left           !important;
   }
 
-  /* stretch all other inputs, textareas, selects, dropdowns, file-fields */
+  /* stretch all inputs, textareas, selects, dropdowns, file-fields */
   #applyForm input.form-control,
   #applyForm textarea.form-control,
   #applyForm select.form-control,
@@ -53,8 +52,9 @@
 /* 2) Flatten the “Applicant Information” section to full width             */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  /* questionnaire wrapper + container + header + list + each question */
+  /* questionnaire wrapper */
   #applyForm .form-group.form-group-questionnaires .col-xs-12.col-sm-9.col-sm-offset-3,
+  /* the questionnaire container + header + list + each question */
   #applyForm .questionnaire,
   #applyForm .questionnaire-header,
   #applyForm .questions,
@@ -102,7 +102,7 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 4) On mobile (≤767px), revert everything to simple full-width           */
+/* 4) On mobile (≤767px), revert everything to full-width                   */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 767px) {
   #applyForm .form-group > [class*="col-"],
@@ -130,7 +130,7 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 5) Ensure the Comeet dropdowns/select-toggles also go full-width        */
+/* 5) Ensure the Comeet dropdowns/select-toggles also go full-width          */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
   /* the “Choose” toggle in each questionnaire field */
@@ -145,6 +145,7 @@
     box-sizing: border-box     !important;
   }
 }
+
 @media (max-width: 767px) {
   #applyForm .dropdown.left .dropdown-toggle,
   #applyForm .dropdown.left .dropdown-menu {
