@@ -104,11 +104,26 @@ form#applyForm h3.questionnaire-name ~ * {
 }
 
 /* ==========================================================================
-   9) **Left-align** the “Applicant Information” block under the inputs
+   9) Indent “Applicant Information” questions under the input column at >768px
    ========================================================================== */
-#apply-form-container .form-group.form-group-questionnaires,
-#apply-form-container .form-group.form-group-questionnaires .col-xs-12 {
-  margin-left: 0 !important;
-  max-width: 100% !important;
+@media (min-width: 768px) {
+  /* bootstrap’s sm breakpoint: labels = 25%, controls = 75% */
+  #jobFormDiv .form-group.form-group-questionnaires > .col-xs-12,
+  form#applyForm.form-horizontal .form-group.form-group-questionnaires > .col-xs-12 {
+    margin-left: 25% !important;
+    width: 75% !important;
+  }
 }
+
+/* ==========================================================================
+  10) On mobile (<768px) let the questionnaire go full width again
+   ========================================================================== */
+@media (max-width: 767px) {
+  #jobFormDiv .form-group.form-group-questionnaires > .col-xs-12,
+  form#applyForm.form-horizontal .form-group.form-group-questionnaires > .col-xs-12 {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
 
