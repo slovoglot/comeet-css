@@ -6,7 +6,7 @@
   #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-3"],
   #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-9"] {
     float: none                !important;
-    width: 100%                !important;
+    width: 125%                !important;
     margin: 0                  !important;
     padding: 0                 !important;
     box-sizing: border-box     !important;
