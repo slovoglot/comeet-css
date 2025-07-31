@@ -1,27 +1,4 @@
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 0) EXTEND TOP‐OF‐FORM INPUT CONTAINERS 25% WIDER                          */
-/* ─────────────────────────────────────────────────────────────────────────── */
-@media (min-width: 768px) {
-  /* keep the label wrapper full‐width */
-  #applyForm .form-group:not(.form-group-questionnaires) > .col-xs-12.col-sm-3 {
-    float: none                !important;
-    width: 125%                !important;
-    margin: 0                  !important;
-    padding: 0                 !important;
-    box-sizing: border-box     !important;
-  }
-  /* extend the input wrapper 125% so it overhangs 25% to the right */
-  #applyForm .form-group:not(.form-group-questionnaires) > .col-xs-12.col-sm-9 {
-    float: none                !important;
-    width: 125%                !important;
-    margin: 0                  !important;
-    padding: 0                 !important;
-    box-sizing: border-box     !important;
-    overflow: visible          !important;
-  }
-}
-
-/* ─────────────────────────────────────────────────────────────────────────── */
 /* 1) STACK LABELS/FIELD‐TITLES FULL WIDTH ABOVE THEIR INPUTS               */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
@@ -69,7 +46,7 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 3) FLATTEN PRIVACY NOTICE, APPLY BUTTON & QUESTIONNAIRE LINKS             */
+/* 3) FLATTEN PRIVACY NOTICE, APPLY BUTTON & “EXPAND” LINKS                   */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
   #applyForm .privacy-policy-1 .col-xs-12.col-sm-9.col-sm-offset-3,
@@ -118,23 +95,20 @@
   #applyForm .questions .question,
   #applyForm .privacy-policy-1 .col-xs-12.col-sm-9.col-sm-offset-3,
   #applyForm .submit-button .col-xs-12.col-sm-9.col-sm-offset-3,
-  #applyForm ul.questionnairesLinks {
+  #applyForm ul.questionnairesLinks,
+  #applyForm .dropdown.left .dropdown-toggle,
+  #applyForm .dropdown.left .dropdown-menu {
     float: none                !important;
     width: 100%                !important;
     margin: 0                  !important;
     padding: 0                 !important;
     box-sizing: border-box     !important;
-  }
-  #applyForm .dropdown.left .dropdown-toggle,
-  #applyForm .dropdown.left .dropdown-menu {
     display: block             !important;
-    width: 100%                !important;
-    box-sizing: border-box     !important;
   }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 5) DROPDOWNS / SELECTs FULL-WIDTH                                          */
+/* 5) DROPDOWNS / SELECTs FULL‐WIDTH                                          */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
   #applyForm .dropdown.left .dropdown-toggle {
@@ -149,42 +123,36 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 6) SPILL 25% ONLY THE FIRST 4 FIELDS (name / email / phone)                */
+/* 6) SPILL 25% ON ONLY THE FIRST 4 ROWS (First/Last name, Email, Phone)      */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  /* only “First name”, “Last name”, “Email” & “Phone” go 125% wide */
-  #applyForm .form-group.field-first-name    > .col-xs-12.col-sm-9,
-  #applyForm .form-group.field-last-name     > .col-xs-12.col-sm-9,
-  #applyForm .form-group.field-email         > .col-xs-12.col-sm-9,
-  #applyForm .form-group.field-phone         > .col-xs-12.col-sm-9 {
-    width: 125%               !important;
-    box-sizing: border-box    !important;
-  }
-}
-/* if your theme uses section to clip overflow */
-.careers-page section {
-  overflow-x: visible   !important;
-}
-/* make the iframe itself 125% so it overhangs 25% on the right */
-.jobs-referral-code-embed iframe.comeet-iframe {
-  width:      125%      !important;
-  min-width:  125%      !important;
-  margin:     0         !important;
-  overflow:   visible   !important;
-}
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* ▸ ONLY the first four rows (first/last name, email, phone) go 125% wide    */
-/*    everything else stays at 100%                                            */
-/* ─────────────────────────────────────────────────────────────────────────── */
-@media (min-width: 768px) {
-  /* target exactly those four fields’ right-hand column */
-  #applyForm .form-group.field-first-name > .col-sm-9,
-  #applyForm .form-group.field-last-name  > .col-sm-9,
-  #applyForm .form-group.field-email      > .col-sm-9,
-  #applyForm .form-group.field-phone      > .col-sm-9 {
+  /* exactly those four fields’ right-hand columns */
+  #applyForm .form-group.field-first-name > .col-xs-12.col-sm-9,
+  #applyForm .form-group.field-last-name  > .col-xs-12.col-sm-9,
+  #applyForm .form-group.field-email      > .col-xs-12.col-sm-9,
+  #applyForm .form-group.field-phone      > .col-xs-12.col-sm-9 {
     width:      125% !important;
     max-width:  none !important;
     box-sizing: border-box !important;
   }
 }
 
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* 7) RELEASE WEBFLOW CONTAINER & SPILL THE IFRAME                            */
+/* ─────────────────────────────────────────────────────────────────────────── */
+.careers-page .w-container,
+.jobs-referral-code-embed {
+  max-width: none       !important;
+  width:     100%       !important;
+  padding:   0          !important;
+  overflow-x: visible   !important;
+}
+.careers-page section {
+  overflow-x: visible   !important; /* in case your theme wraps in a <section> */
+}
+.jobs-referral-code-embed iframe.comeet-iframe {
+  width:      125%      !important;
+  min-width: 125%      !important;
+  margin:     0         !important;
+  overflow:   visible   !important;
+}
