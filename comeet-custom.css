@@ -1,58 +1,112 @@
-/* 1. Root the override to the standalone form */
-.form-container,
-form#applyForm {
+/* ==========================================================================
+   1) Force Satoshi & restore spacing for headings/paras inside the form
+   ========================================================================== */
+#jobFormDiv,
+form#applyForm,
+.form-container {
   font-family: 'Satoshi', sans-serif !important;
 }
 
-/* 2. Undo any zero-margin resets on headings/paras inside the form */
+#jobFormDiv p,
+#jobFormDiv h1, #jobFormDiv h2, #jobFormDiv h3, #jobFormDiv h4, #jobFormDiv h5, #jobFormDiv h6,
 form#applyForm p,
-form#applyForm h1,
-form#applyForm h2,
-form#applyForm h3,
-form#applyForm h4,
-form#applyForm h5,
-form#applyForm h6 {
+form#applyForm h1, form#applyForm h2, form#applyForm h3, form#applyForm h4, form#applyForm h5, form#applyForm h6 {
   margin: 1rem 0 !important;
+  padding: 0 !important;
 }
 
-/* 3. Full-width vertical layout for every field group */
-form#applyForm .form-group {
+/* ==========================================================================
+   2) Vertical, full-width layout for each field-group & inner grid columns
+   ========================================================================== */
+#jobFormDiv .form-group,
+form#applyForm.form-horizontal .form-group {
   display: block !important;
   width: 100% !important;
   float: none !important;
+  clear: both !important;
   margin: 1.5rem 0 !important;
 }
 
-/* 4. Labels above inputs */
-form#applyForm .form-group label {
+/* Override the Bootstrap grid wrapper so controls span 100% */
+#jobFormDiv .col-xs-12.col-sm-9,
+form#applyForm.form-horizontal .col-xs-12.col-sm-9 {
+  width: 100% !important;
+  float: none !important;
+}
+
+/* ==========================================================================
+   3) Labels on their own line above inputs/textareas
+   ========================================================================== */
+#jobFormDiv .form-group label,
+form#applyForm.form-horizontal .form-group label {
   display: block !important;
+  width: 100% !important;
   margin-bottom: 0.5rem !important;
   text-align: left !important;
 }
 
-/* 5. Inputs & textareas fill 100% */
-form#applyForm .form-group input,
-form#applyForm .form-group textarea {
+/* Inputs & textareas fill the full width */
+#jobFormDiv .form-group input,
+#jobFormDiv .form-group textarea,
+form#applyForm.form-horizontal .form-group input,
+form#applyForm.form-horizontal .form-group textarea {
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
-/* 6. Tidy Attach links */
-form#applyForm .form-group.field-resume a,
-form#applyForm .form-group.field-cover-letter a {
-  margin-top: 0.25rem !important;
+/* ==========================================================================
+   4) Style “Attach Resume/Cover Letter/Portfolio” links
+   ========================================================================== */
+#jobFormDiv .form-group.field-resume a,
+#jobFormDiv .form-group.field-cover-letter a,
+#jobFormDiv .form-group.field-portfolio a,
+form#applyForm.form-horizontal .form-group.field-resume a,
+form#applyForm.form-horizontal .form-group.field-cover-letter a,
+form#applyForm.form-horizontal .form-group.field-portfolio a {
   display: inline-block !important;
+  margin-top: 0.25rem !important;
 }
 
-/* 7. Center & space submit */
-form#applyForm .form-group.submit-button {
+/* ==========================================================================
+   5) Center & space the submit button
+   ========================================================================== */
+#jobFormDiv .form-group.submit-button,
+form#applyForm.form-horizontal .form-group.submit-button {
   text-align: center !important;
   margin-top: 2rem !important;
 }
+#jobFormDiv .form-group.submit-button button,
+form#applyForm.form-horizontal .form-group.submit-button button {
+  font-family: 'Satoshi', sans-serif !important;
+}
 
-/* from “Applicant Information” onward */
+/* ==========================================================================
+   6) Add 100px right padding from “Applicant Information” onward
+   ========================================================================== */
+#jobFormDiv h3.questionnaire-name,
+#jobFormDiv h3.questionnaire-name ~ *,
 form#applyForm h3.questionnaire-name,
 form#applyForm h3.questionnaire-name ~ * {
   padding-right: 100px !important;
 }
+
+/* ==========================================================================
+   7) Center the entire embed to your 900px content column
+   ========================================================================== */
+/* Wraps your Webflow placeholder + standalone form */
+#apply-form-container,
+#apply-form-container .form-container,
+#apply-form-container #jobFormDiv,
+#apply-form-container form#applyForm {
+  max-width: 900px;
+  margin: 0 auto !important;
+}
+
+/* Also center the questionnaire block itself */
+#apply-form-container .form-group.form-group-questionnaires,
+#apply-form-container .form-group.form-group-questionnaires .col-xs-12 {
+  max-width: 900px;
+  margin: 0 auto !important;
+}
+
 
