@@ -1,39 +1,53 @@
-/* ==========================================================================
-   Comeet Embed – Full-Width Overrides (comeet-custom.css)
-   ========================================================================== */
+/* ===================================================================
+   Fresh Comeet Embed CSS: Stack Labels Above Their Inputs
+   =================================================================== */
 
-/* 1) Ensure the embed container spans 100% of its parent */
-#apply-form-container,
+/* 1) Embed container & typography */
 .form-container,
 form#applyForm,
 #jobFormDiv {
   width: 100% !important;
   max-width: none !important;
   margin: 0 auto !important;
+  font-family: 'Satoshi', sans-serif !important;
   padding: 0 !important;
 }
 
-/* 2) Make every field-group a full-width block */
+/* 2) Override Bootstrap grid so everything spans full width */
+.form-container .col-xs-12,
+.form-container .col-sm-3,
+.form-container .col-sm-9,
+#jobFormDiv .col-xs-12,
+#jobFormDiv .col-sm-3,
+#jobFormDiv .col-sm-9,
+form#applyForm .col-xs-12,
+form#applyForm .col-sm-3,
+form#applyForm .col-sm-9 {
+  width: 100% !important;
+  float: none !important;
+}
+
+/* 3) Make each field-group a column flex container */
 .form-container .form-group,
 #jobFormDiv .form-group,
 form#applyForm .form-group {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column !important;
   width: 100% !important;
-  clear: both !important;
-  margin: 1.5rem 0 !important;
+  margin-bottom: 1.5rem !important;
 }
 
-/* 3) Force all labels to occupy full width */
+/* 4) Labels sit above controls */
 .form-container .form-group label,
 #jobFormDiv .form-group label,
 form#applyForm .form-group label {
   display: block !important;
-  width: 100% !important;
   margin-bottom: 0.5rem !important;
   text-align: left !important;
+  width: 100% !important;
 }
 
-/* 4) Inputs, textareas, selects span 100% */
+/* 5) Inputs, textareas, selects fill the width */
 .form-container .form-group input,
 .form-container .form-group textarea,
 .form-container .form-group select,
@@ -43,49 +57,35 @@ form#applyForm .form-group label {
 form#applyForm .form-group input,
 form#applyForm .form-group textarea,
 form#applyForm .form-group select {
-  display: block !important;
   width: 100% !important;
   box-sizing: border-box !important;
-}
-
-/* 5) Override Bootstrap grid columns to full width */
-.col-xs-12,
-.col-sm-3,
-.col-sm-9 {
-  width: 100% !important;
-  float: none !important;
-}
-
-/* 6) Make dropdown containers and options full width */
-.form-container .dropdown,
-#jobFormDiv .dropdown,
-form#applyForm .dropdown,
-.form-container .option-title,
-#jobFormDiv .option-title,
-form#applyForm .option-title,
-.form-container .option-description,
-#jobFormDiv .option-description,
-form#applyForm .option-description {
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* 7) Questionnaire section full width */
-.form-container .form-group-questionnaires,
-#jobFormDiv .form-group-questionnaires,
-form#applyForm .form-group-questionnaires {
-  width: 100% !important;
   margin: 0 !important;
-  padding: 0 !important;
 }
 
-/* 8) Submit button and other buttons full width */
+/* 6) Style “Attach” links under resume/cover-letter/portfolio */
+.form-container .form-group.field-resume a,
+.form-container .form-group.field-cover-letter a,
+.form-container .form-group.field-portfolio a,
+#jobFormDiv .form-group.field-resume a,
+#jobFormDiv .form-group.field-cover-letter a,
+#jobFormDiv .form-group.field-portfolio a,
+form#applyForm .form-group.field-resume a,
+form#applyForm .form-group.field-cover-letter a,
+form#applyForm .form-group.field-portfolio a {
+  display: inline-block !important;
+  margin-top: 0.25rem !important;
+}
+
+/* 7) Center & style the submit button */
+.form-container .form-group.submit-button,
+#jobFormDiv .form-group.submit-button,
+form#applyForm .form-group.submit-button {
+  align-items: center !important;
+}
+
 .form-container .form-group.submit-button button,
 #jobFormDiv .form-group.submit-button button,
-form#applyForm .form-group.submit-button button,
-.form-container button,
-#jobFormDiv button,
-form#applyForm button {
-  display: block !important;
-  width: 100% !important;
+form#applyForm .form-group.submit-button button {
+  padding: 0.75rem 1.5rem !important;
+  font-family: 'Satoshi', sans-serif !important;
 }
