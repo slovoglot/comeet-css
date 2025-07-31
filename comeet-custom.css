@@ -163,3 +163,15 @@
   margin:     0         !important;
   overflow:   visible   !important;
 }
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* Force every right-hand column in #applyForm to go full-width              */
+/* (to override bootstrap.min.css’s .col-sm-9 width:100%)                   */
+/* ─────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  #applyForm .col-sm-9 {
+    width:      100% !important;
+    max-width:  none !important;
+    box-sizing: border-box !important;
+  }
+}
+
