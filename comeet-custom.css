@@ -58,3 +58,83 @@ form#applyForm {
   padding: 0.75rem 1rem !important;
   font-family: 'Satoshi', sans-serif !important;
 }
+
+
+
+/* ==========================================================================
+   Questionnaire Overrides – 100% Width + 25% Right Gutter
+   ========================================================================== */
+
+/* 1) Make the overall questionnaire list span 100% with a 25% right gutter */
+ul.questionnaires,
+ul.questionnaires > li,
+ul.questionnaires .questionnaire,
+ul.questionnaires .questions,
+ul.questionnaires .question {
+  width: 100% !important;
+  margin-right: 25% !important;
+  margin-left: 0 !important;
+  padding: 0 !important;
+}
+
+/* 2) Fieldset and its header/title full width */
+ul.questionnaires .questionnaire .fieldset,
+ul.questionnaires .questionnaire-header,
+ul.questionnaires .question-header,
+ul.questionnaires legend.question-title {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 3) Treat the legend like a label above its control */
+ul.questionnaires legend.question-title {
+  display: block !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+}
+
+/* 4) Make text inputs full width */
+ul.questionnaires input.form-control {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 5) Make dropdown toggles and menus full width */
+ul.questionnaires .dropdown,
+ul.questionnaires .dropdown-toggle,
+ul.questionnaires .dropdown-menu {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 6) Make radio/checkbox option titles full width */
+ul.questionnaires .options .option-title,
+ul.questionnaires .options .option-description {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0.25rem 0 !important;
+}
+
+/* 7) Style fineprint & explanations full width */
+ul.questionnaires .question-description,
+ul.questionnaires .question-fineprint {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0.5rem 0 !important;
+}
+
+/* 8) Ensure the final submit-button remains full width */
+.form-group.submit-button,
+ul.questionnaires .form-group.submit-button {
+  width: 100% !important;
+  margin-right: 25% !important;
+}
+.form-group.submit-button button,
+ul.questionnaires .form-group.submit-button button {
+  width: 100% !important;
+}
