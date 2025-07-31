@@ -27,7 +27,7 @@ form#applyForm.form-horizontal .form-group {
   margin: 1.5rem 0 !important;
 }
 
-/* Override control‐column width so inputs span 100% */
+/* Make the “control” column (inputs) span 100% */
 #jobFormDiv .col-xs-12.col-sm-9,
 form#applyForm.form-horizontal .col-xs-12.col-sm-9 {
   width: 100% !important;
@@ -35,7 +35,7 @@ form#applyForm.form-horizontal .col-xs-12.col-sm-9 {
 }
 
 /* ==========================================================================
-   3) Put labels on their own line above controls
+   3) Labels on their own line above controls
    ========================================================================== */
 #jobFormDiv .form-group label,
 form#applyForm.form-horizontal .form-group label {
@@ -57,7 +57,7 @@ form#applyForm.form-horizontal .form-group textarea {
 }
 
 /* ==========================================================================
-   5) Style “Attach…” links (Resume/Cover Letter/Portfolio)
+   5) Style “Attach Resume/Cover Letter/Portfolio” links
    ========================================================================== */
 #jobFormDiv .form-group.field-resume a,
 #jobFormDiv .form-group.field-cover-letter a,
@@ -94,12 +94,10 @@ form#applyForm.form-horizontal .form-group.submit-button button {
 }
 
 /* ==========================================================================
-   8) Add 25% right margin from “Applicant Information” onward
+   8) From “Applicant Information” onward, shrink to 75% width with 25% right margin
    ========================================================================== */
-#jobFormDiv h3.questionnaire-name,
-#jobFormDiv h3.questionnaire-name ~ *,
-form#applyForm h3.questionnaire-name,
-form#applyForm h3.questionnaire-name ~ * {
-  width: auto !important;
+form#applyForm .form-group.form-group-questionnaires > .col-xs-12,
+#jobFormDiv .form-group.form-group-questionnaires > .col-xs-12 {
+  width: 75% !important;
   margin-right: 25% !important;
 }
