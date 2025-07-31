@@ -27,7 +27,7 @@ form#applyForm.form-horizontal .form-group {
   margin: 1.5rem 0 !important;
 }
 
-/* Make the control column (inputs) go full width */
+/* Override control‐column width so inputs span 100% */
 #jobFormDiv .col-xs-12.col-sm-9,
 form#applyForm.form-horizontal .col-xs-12.col-sm-9 {
   width: 100% !important;
@@ -46,7 +46,7 @@ form#applyForm.form-horizontal .form-group label {
 }
 
 /* ==========================================================================
-   4) Inputs & textareas span the full group width
+   4) Inputs & textareas fill the full group width
    ========================================================================== */
 #jobFormDiv .form-group input,
 #jobFormDiv .form-group textarea,
@@ -57,7 +57,7 @@ form#applyForm.form-horizontal .form-group textarea {
 }
 
 /* ==========================================================================
-   5) Style “Attach…” links under resume / cover-letter / portfolio
+   5) Style “Attach…” links (Resume/Cover Letter/Portfolio)
    ========================================================================== */
 #jobFormDiv .form-group.field-resume a,
 #jobFormDiv .form-group.field-cover-letter a,
@@ -83,17 +83,7 @@ form#applyForm.form-horizontal .form-group.submit-button button {
 }
 
 /* ==========================================================================
-   7) Add 100px right padding from “Applicant Information” onward
-   ========================================================================== */
-#jobFormDiv h3.questionnaire-name,
-#jobFormDiv h3.questionnaire-name ~ *,
-form#applyForm h3.questionnaire-name,
-form#applyForm h3.questionnaire-name ~ * {
-  padding-right: 100px !important;
-}
-
-/* ==========================================================================
-   8) Center the entire form embed to a 900px content column
+   7) Center the entire form embed to a 900px content column
    ========================================================================== */
 #apply-form-container,
 #apply-form-container .form-container,
@@ -104,26 +94,12 @@ form#applyForm h3.questionnaire-name ~ * {
 }
 
 /* ==========================================================================
-   9) Indent “Applicant Information” questions under the input column at >768px
+   8) Add 25% right margin from “Applicant Information” onward
    ========================================================================== */
-@media (min-width: 768px) {
-  /* bootstrap’s sm breakpoint: labels = 25%, controls = 75% */
-  #jobFormDiv .form-group.form-group-questionnaires > .col-xs-12,
-  form#applyForm.form-horizontal .form-group.form-group-questionnaires > .col-xs-12 {
-    margin-left: 25% !important;
-    width: 75% !important;
-  }
+#jobFormDiv h3.questionnaire-name,
+#jobFormDiv h3.questionnaire-name ~ *,
+form#applyForm h3.questionnaire-name,
+form#applyForm h3.questionnaire-name ~ * {
+  width: 75% !important;
+  margin-right: 25% !important;
 }
-
-/* ==========================================================================
-  10) On mobile (<768px) let the questionnaire go full width again
-   ========================================================================== */
-@media (max-width: 767px) {
-  #jobFormDiv .form-group.form-group-questionnaires > .col-xs-12,
-  form#applyForm.form-horizontal .form-group.form-group-questionnaires > .col-xs-12 {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-}
-
-
