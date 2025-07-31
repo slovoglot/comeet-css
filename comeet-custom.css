@@ -1,15 +1,14 @@
-/* ==========================================================================
-   Comeet Embed – 100% Width & Labels on Top (comeet-custom.css)
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   Comeet Embed – Full Width with Right Gutter (comeet-custom.css)
+   -------------------------------------------------------------------------- */
 
-/* 1) Root container & typography */
+/* 1) Root embed container – fill 100% and leave 25% gutter on the right */
 .form-container,
-form#applyForm,
-#jobFormDiv {
+#jobFormDiv,
+form#applyForm {
   width: 100% !important;
-  max-width: none !important;
   margin: 0 !important;
-  padding: 0 !important;
+  margin-right: 25% !important;
   font-family: 'Satoshi', sans-serif !important;
 }
 
@@ -21,15 +20,14 @@ form#applyForm,
   float: none !important;
 }
 
-/* 3) Make each field-group a full-width block */
+/* 3) Make every field-group a full-width block */
 .form-group {
   display: block !important;
   width: 100% !important;
-  clear: both !important;
-  margin: 1.5rem 0 !important;
+  margin-bottom: 1.5rem !important;
 }
 
-/* 4) Stack labels above controls */
+/* 4) Stack labels above their controls */
 .form-group label {
   display: block !important;
   width: 100% !important;
@@ -37,7 +35,7 @@ form#applyForm,
   text-align: left !important;
 }
 
-/* 5) Inputs, textareas, and selects fill the width */
+/* 5) Inputs, textareas & selects fill 100% */
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -54,30 +52,9 @@ form#applyForm,
   margin-top: 0.25rem !important;
 }
 
-/* 7) Center & full-width submit button */
-.form-group.submit-button {
-  text-align: center !important;
-  margin-top: 2rem !important;
-}
+/* 7) Submit button – full width */
 .form-group.submit-button button {
   width: 100% !important;
+  padding: 0.75rem 1rem !important;
   font-family: 'Satoshi', sans-serif !important;
-}
-
-/* 8) Flush-left “Applicant Information” + all subsequent questions */
-.form-group.form-group-questionnaires,
-.form-group.form-group-questionnaires > .col-xs-12,
-.questionnairesWidget,
-.questionnaire,
-.questionnaire-header,
-h3.questionnaire-name,
-.question-header,
-.question-description.userDesignedContent.mediumText,
-.question-fineprint.mediumText,
-.dropdown.left,
-.option-title,
-.option-description.userDesignedContent.lightText {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  width: 100% !important;
 }
