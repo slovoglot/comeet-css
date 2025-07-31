@@ -1,103 +1,67 @@
-/* ==========================================================================
-   1) Force Satoshi & restore spacing for paragraphs/headings inside the form
-   ========================================================================== */
-#jobFormDiv,
+/* ------------------------------------------------------------
+   Fresh Comeet Embed Overrides (comeet-custom.css)
+   ------------------------------------------------------------ */
+
+/* 1) Root container & typography */
+.form-container,
 form#applyForm,
-.form-container {
+#jobFormDiv {
   font-family: 'Satoshi', sans-serif !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
 }
 
-#jobFormDiv p,
-#jobFormDiv h1, #jobFormDiv h2, #jobFormDiv h3, #jobFormDiv h4, #jobFormDiv h5, #jobFormDiv h6,
-form#applyForm p,
-form#applyForm h1, form#applyForm h2, form#applyForm h3, form#applyForm h4, form#applyForm h5, form#applyForm h6 {
+/* 2) Headings & paragraphs inside form */
+.form-container p,
+.form-container h1, .form-container h2, .form-container h3,
+.form-container h4, .form-container h5, .form-container h6 {
   margin: 1rem 0 !important;
   padding: 0 !important;
 }
 
-/* ==========================================================================
-   2) Vertical, full-width layout for each field-group & grid override
-   ========================================================================== */
-#jobFormDiv .form-group,
-form#applyForm.form-horizontal .form-group {
+/* 3) Stack every field-group vertically & full-width */
+.form-container .form-group {
   display: block !important;
   width: 100% !important;
-  float: none !important;
   clear: both !important;
   margin: 1.5rem 0 !important;
 }
 
-/* Make the “control” column (inputs) span 100% */
-#jobFormDiv .col-xs-12.col-sm-9,
-form#applyForm.form-horizontal .col-xs-12.col-sm-9 {
-  width: 100% !important;
-  float: none !important;
-}
-
-/* ==========================================================================
-   3) Labels on their own line above controls
-   ========================================================================== */
-#jobFormDiv .form-group label,
-form#applyForm.form-horizontal .form-group label {
+/* 4) Labels above controls */
+.form-container .form-group label {
   display: block !important;
-  width: 100% !important;
   margin-bottom: 0.5rem !important;
   text-align: left !important;
 }
 
-/* ==========================================================================
-   4) Inputs & textareas fill the full group width
-   ========================================================================== */
-#jobFormDiv .form-group input,
-#jobFormDiv .form-group textarea,
-form#applyForm.form-horizontal .form-group input,
-form#applyForm.form-horizontal .form-group textarea {
+/* 5) Inputs & textareas span 100% */
+.form-container .form-group input,
+.form-container .form-group textarea {
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
-/* ==========================================================================
-   5) Style “Attach Resume/Cover Letter/Portfolio” links
-   ========================================================================== */
-#jobFormDiv .form-group.field-resume a,
-#jobFormDiv .form-group.field-cover-letter a,
-#jobFormDiv .form-group.field-portfolio a,
-form#applyForm.form-horizontal .form-group.field-resume a,
-form#applyForm.form-horizontal .form-group.field-cover-letter a,
-form#applyForm.form-horizontal .form-group.field-portfolio a {
+/* 6) “Attach” links under Resume/Cover/Portfolio */
+.form-container .form-group.field-resume a,
+.form-container .form-group.field-cover-letter a,
+.form-container .form-group.field-portfolio a {
   display: inline-block !important;
   margin-top: 0.25rem !important;
 }
 
-/* ==========================================================================
-   6) Center & add space above the submit button
-   ========================================================================== */
-#jobFormDiv .form-group.submit-button,
-form#applyForm.form-horizontal .form-group.submit-button {
+/* 7) Submit button styling */
+.form-container .form-group.submit-button {
   text-align: center !important;
   margin-top: 2rem !important;
 }
-#jobFormDiv .form-group.submit-button button,
-form#applyForm.form-horizontal .form-group.submit-button button {
+.form-container .form-group.submit-button button {
   font-family: 'Satoshi', sans-serif !important;
 }
 
-/* ==========================================================================
-   7) Center the entire form embed to a 900px content column
-   ========================================================================== */
-#apply-form-container,
-#apply-form-container .form-container,
-#apply-form-container #jobFormDiv,
-#apply-form-container form#applyForm {
-  max-width: 900px !important;
-  margin: 0 auto !important;
-}
-
-/* ==========================================================================
-   8) From “Applicant Information” onward, shrink to 75% width with 25% right margin
-   ========================================================================== */
-form#applyForm .form-group.form-group-questionnaires > .col-xs-12,
-#jobFormDiv .form-group.form-group-questionnaires > .col-xs-12 {
-  width: 75% !important;
-  margin-right: 25% !important;
+/* 8) Questionnaire block (“Applicant Information”) alignment */
+.form-container .form-group.form-group-questionnaires {
+  margin: 0 !important;
+  width: 100% !important;
+  padding-top: 2rem !important;
 }
