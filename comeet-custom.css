@@ -6,9 +6,9 @@
   #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-3"],
   #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-9"] {
     float: none                !important;
-    width: 100%                !important;  /* restore to full width */
+    width: 125%                !important;  /* restore to full width */
     margin: 0                  !important;
-    padding: 0                 !important;
+    padding-right: 800px                 !important;
     box-sizing: border-box     !important;
   }
 }
