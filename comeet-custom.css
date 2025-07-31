@@ -1,15 +1,20 @@
-/* --------------------------------------------------------------------------
-   Comeet Embed – Full Width with Right Gutter (comeet-custom.css)
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   comeet-custom.css
+   Full-width Comeet embed with 25% right gutter and labels on top
+   ========================================================================== */
 
-/* 1) Root embed container – fill 100% and leave 25% gutter on the right */
+/* 1) Embed container – span 100% and leave 25% empty on the right */
+#apply-form-container,
 .form-container,
 #jobFormDiv,
 form#applyForm {
   width: 100% !important;
+  max-width: none !important;
   margin: 0 !important;
   margin-right: 25% !important;
+  padding: 0 !important;
   font-family: 'Satoshi', sans-serif !important;
+  box-sizing: border-box !important;
 }
 
 /* 2) Reset Bootstrap grid columns to full width */
@@ -20,10 +25,11 @@ form#applyForm {
   float: none !important;
 }
 
-/* 3) Make every field-group a full-width block */
+/* 3) Make each form-group a full-width block */
 .form-group {
   display: block !important;
   width: 100% !important;
+  clear: both !important;
   margin-bottom: 1.5rem !important;
 }
 
@@ -35,10 +41,11 @@ form#applyForm {
   text-align: left !important;
 }
 
-/* 5) Inputs, textareas & selects fill 100% */
+/* 5) Inputs, textareas & selects span 100% */
 .form-group input,
 .form-group textarea,
 .form-group select {
+  display: block !important;
   width: 100% !important;
   box-sizing: border-box !important;
   margin: 0 !important;
@@ -52,89 +59,38 @@ form#applyForm {
   margin-top: 0.25rem !important;
 }
 
-/* 7) Submit button – full width */
+/* 7) Submit button – full width and centered */
+.form-group.submit-button {
+  text-align: center !important;
+  margin-top: 2rem !important;
+}
 .form-group.submit-button button {
+  display: block !important;
   width: 100% !important;
-  padding: 0.75rem 1rem !important;
   font-family: 'Satoshi', sans-serif !important;
 }
 
-
-
-/* ==========================================================================
-   Questionnaire Overrides – 100% Width + 25% Right Gutter
-   ========================================================================== */
-
-/* 1) Make the overall questionnaire list span 100% with a 25% right gutter */
+/* 8) Flush-left “Applicant Information” & all questionnaire elements,
+      with a 25% right gutter */
 ul.questionnaires,
 ul.questionnaires > li,
-ul.questionnaires .questionnaire,
-ul.questionnaires .questions,
-ul.questionnaires .question {
-  width: 100% !important;
-  margin-right: 25% !important;
-  margin-left: 0 !important;
-  padding: 0 !important;
-}
-
-/* 2) Fieldset and its header/title full width */
-ul.questionnaires .questionnaire .fieldset,
-ul.questionnaires .questionnaire-header,
-ul.questionnaires .question-header,
-ul.questionnaires legend.question-title {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* 3) Treat the legend like a label above its control */
-ul.questionnaires legend.question-title {
-  display: block !important;
-  margin-bottom: 0.5rem !important;
-  font-weight: 600 !important;
-  text-align: left !important;
-}
-
-/* 4) Make text inputs full width */
-ul.questionnaires input.form-control {
-  display: block !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* 5) Make dropdown toggles and menus full width */
+.form-group.form-group-questionnaires,
+.questionnairesWidget,
+.questionnaire,
+.questionnaire-header,
+.question-header,
+legend.question-title,
+ul.questionnaires input.form-control,
 ul.questionnaires .dropdown,
-ul.questionnaires .dropdown-toggle,
-ul.questionnaires .dropdown-menu {
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* 6) Make radio/checkbox option titles full width */
-ul.questionnaires .options .option-title,
-ul.questionnaires .options .option-description {
-  display: block !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  margin: 0.25rem 0 !important;
-}
-
-/* 7) Style fineprint & explanations full width */
+ul.questionnaires .dropdown-menu,
+ul.questionnaires .option-title,
+ul.questionnaires .option-description,
 ul.questionnaires .question-description,
 ul.questionnaires .question-fineprint {
-  display: block !important;
   width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 25% !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
-  margin: 0.5rem 0 !important;
 }
 
-/* 8) Ensure the final submit-button remains full width */
-.form-group.submit-button,
-ul.questionnaires .form-group.submit-button {
-  width: 100% !important;
-  margin-right: 25% !important;
-}
-.form-group.submit-button button,
-ul.questionnaires .form-group.submit-button button {
-  width: 100% !important;
-}
