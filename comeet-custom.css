@@ -1,90 +1,78 @@
 /* ==========================================================================
-   comeet-custom.css
-   Comeet embed – centered 900px, labels on top, full-width controls,
-   and 25% indent for Applicant Information onward
+   comeet-custom.css – Full solution
    ========================================================================== */
 
-/* 1) Center the embed & set Satoshi */
-.form-container,
-form#applyForm {
+/* ─── 1) Center the embed & set font ─────────────────────────────────────── */
+#apply-form-container,
+#apply-form-container .form-container,
+#apply-form-container form#applyForm {
   max-width: 900px;
   margin: 0 auto !important;
   font-family: 'Satoshi', sans-serif !important;
   box-sizing: border-box;
 }
 
-/* 2) Stack every .form-group vertically & full-width */
-form#applyForm .form-group {
+/* ─── 2) Stack all form-groups vertically & full width ─────────────────── */
+#apply-form-container .form-horizontal .form-group {
   display: block !important;
   width: 100% !important;
-  margin: 1.5rem 0 !important;
+  margin-bottom: 1.5rem !important;
 }
 
-/* 3) Labels above controls */
-form#applyForm .form-group label.control-label,
-form#applyForm legend.question-title {
+/* ─── 3) Labels above controls ──────────────────────────────────────────── */
+#apply-form-container .form-horizontal .form-group label.control-label {
   display: block !important;
+  width: 100% !important;
   margin-bottom: 0.5rem !important;
   text-align: left !important;
-  width: 100% !important;
 }
 
-/* 4) Make all inputs, textareas, selects & dropdown-toggles fill 100% */
-form#applyForm input.form-control,
-form#applyForm textarea.form-control,
-form#applyForm select.form-control,
-form#applyForm .dropdown-toggle {
-  display: block !important;
+/* ─── 4) Make every “control” column & input fill 100% ─────────────────── */
+#apply-form-container .form-horizontal .form-group .col-xs-12.col-sm-9,
+#apply-form-container form#applyForm input.form-control,
+#apply-form-container form#applyForm textarea.form-control,
+#apply-form-container form#applyForm select.form-control {
   width: 100% !important;
+  float: none !important;
   box-sizing: border-box !important;
   margin: 0 !important;
 }
 
-/* 5) Style “Attach” links under file fields */
-form#applyForm .form-group.field-resume a,
-form#applyForm .form-group.field-cover-letter a,
-form#applyForm .form-group.field-portfolio a {
+/* ─── 5) Style “Attach” links under file fields ────────────────────────── */
+#apply-form-container .form-group.field-resume a,
+#apply-form-container .form-group.field-cover-letter a,
+#apply-form-container .form-group.field-portfolio a {
   display: inline-block !important;
   margin-top: 0.25rem !important;
 }
 
-/* 6) Submit button full-width */
-form#applyForm .form-group.submit-button {
+/* ─── 6) Full-width submit button ──────────────────────────────────────── */
+#apply-form-container .form-group.submit-button {
   text-align: center !important;
   margin-top: 2rem !important;
 }
-form#applyForm .form-group.submit-button button {
+#apply-form-container .form-group.submit-button button {
   display: block !important;
   width: 100% !important;
 }
 
-/* ==========================================================================
-   7) Indent “Applicant Information” & all questions by 25%
-      so they line up under the input fields above
-   ========================================================================== */
+/* ─── 7) INDENT the Questionnaire block by 25% on desktop ─────────────── */
 @media (min-width: 768px) {
-  /* Move the questionnaire wrapper over by the width of the label column (25%) */
-  form#applyForm .form-group.form-group-questionnaires > .col-xs-12 {
+  /* Only indent the wrapper — everything inside lines up automatically */
+  #apply-form-container
+    .form-group.form-group-questionnaires
+    > .col-xs-12 {
     margin-left: 25% !important;
     width: 75% !important;
     float: none !important;
   }
-  /* Also shift the nested questionnaire elements */
-  form#applyForm .questionnaire,
-  form#applyForm .questionnaire-header,
-  form#applyForm .questions,
-  form#applyForm .question {
-    margin-left: 25% !important;
-    width: 75% !important;
-  }
 }
 
-/* 8) On mobile, let the questionnaire go full width again */
+/* ─── 8) Revert to full width on mobile ────────────────────────────────── */
 @media (max-width: 767px) {
-  form#applyForm .form-group.form-group-questionnaires > .col-xs-12,
-  form#applyForm .questionnaire,
-  form#applyForm .questions,
-  form#applyForm .question {
+  #apply-form-container
+    .form-group.form-group-questionnaires
+    > .col-xs-12 {
     margin-left: 0 !important;
     width: 100% !important;
   }
