@@ -1,8 +1,23 @@
 /* ─────────────────────────────────────────────────────────────────────────── */
+/* 0) FULL-WIDTH top-of-form fields (First name / Last name / etc)            */
+/* ─────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  /* collapse the two-column wrappers for all form-group sections */
+  #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-3"],
+  #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-9"] {
+    float: none                !important;
+    width: 100%                !important;
+    margin: 0                  !important;
+    padding: 0                 !important;
+    box-sizing: border-box     !important;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────── */
 /* 1) Stack every field’s label/legend full-width on top of its input/etc.   */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  /* collapse any Bootstrap column wrappers under each form-group */
+  /* collapse any remaining Bootstrap columns under each form-group */
   #applyForm .form-group > [class*="col-"] {
     float: none                !important;
     width: 100%                !important;
@@ -10,7 +25,7 @@
     box-sizing: border-box     !important;
   }
 
-  /* make every label or question-legend span 100% on its own line */
+  /* force every label or question-legend to its own full-width line */
   #applyForm .form-group .control-label,
   #applyForm legend.question-title {
     display: block             !important;
@@ -20,7 +35,7 @@
     text-align: left           !important;
   }
 
-  /* stretch all inputs/textarea/dropdowns to 100% width */
+  /* stretch all inputs, textareas, selects, dropdowns, file-fields */
   #applyForm input.form-control,
   #applyForm textarea.form-control,
   #applyForm select.form-control,
@@ -87,7 +102,7 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 4) On mobile (<=767px), revert everything to simple full-width           */
+/* 4) On mobile (≤767px), revert everything to full-width                   */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 767px) {
   #applyForm .form-group > [class*="col-"],
