@@ -1,31 +1,36 @@
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 0) FULL-WIDTH top-of-form fields (First name / Last name / etc)            */
+/* 0) EXTEND TOP‐OF‐FORM INPUT CONTAINERS 25% WIDER                          */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  /* collapse the two-column wrappers for all form-group sections */
-  #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-3"],
-  #applyForm .form-group > [class*="col-xs-12"][class*="col-sm-9"] {
+  /* keep the label wrapper full‐width */
+  #applyForm .form-group:not(.form-group-questionnaires) > .col-xs-12.col-sm-3 {
     float: none                !important;
-    width: 125%                !important;  /* restore to full width */
+    width: 100%                !important;
     margin: 0                  !important;
     padding: 0                 !important;
     box-sizing: border-box     !important;
   }
+  /* extend the input wrapper 125% so it overhangs 25% to the right */
+  #applyForm .form-group:not(.form-group-questionnaires) > .col-xs-12.col-sm-9 {
+    float: none                !important;
+    width: 125%                !important;
+    margin: 0                  !important;
+    padding: 0                 !important;
+    box-sizing: border-box     !important;
+    overflow: visible          !important;
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 1) Stack every field’s label/legend full-width on top of its input/etc.   */
+/* 1) STACK LABELS/FIELD‐TITLES FULL WIDTH ABOVE THEIR INPUTS               */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  /* collapse any remaining Bootstrap columns under each form-group */
   #applyForm .form-group > [class*="col-"] {
     float: none                !important;
     width: 100%                !important;
     padding: 0                 !important;
     box-sizing: border-box     !important;
   }
-
-  /* force every label or question-legend to its own full-width line */
   #applyForm .form-group .control-label,
   #applyForm legend.question-title {
     display: block             !important;
@@ -34,8 +39,6 @@
     margin-bottom: .5rem       !important;
     text-align: left           !important;
   }
-
-  /* stretch all inputs, textareas, selects, dropdowns, file-fields */
   #applyForm input.form-control,
   #applyForm textarea.form-control,
   #applyForm select.form-control,
@@ -49,12 +52,10 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 2) Flatten the “Applicant Information” section to full width             */
+/* 2) FLATTEN “APPLICANT INFORMATION” SECTION TO FULL WIDTH                   */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  /* questionnaire wrapper */
   #applyForm .form-group.form-group-questionnaires .col-xs-12.col-sm-9.col-sm-offset-3,
-  /* the questionnaire container + header + list + each question */
   #applyForm .questionnaire,
   #applyForm .questionnaire-header,
   #applyForm .questions,
@@ -68,10 +69,9 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 3) Also flatten privacy notice, apply button & questionnaire-links below  */
+/* 3) FLATTEN PRIVACY NOTICE, APPLY BUTTON & QUESTIONNAIRE LINKS             */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  /* Privacy link wrapper and Apply button wrapper */
   #applyForm .privacy-policy-1 .col-xs-12.col-sm-9.col-sm-offset-3,
   #applyForm .submit-button .col-xs-12.col-sm-9.col-sm-offset-3 {
     float: none                !important;
@@ -80,21 +80,19 @@
     padding: 0                 !important;
     box-sizing: border-box     !important;
   }
-
-  /* Make the privacy text itself full width and left-aligned */
   #applyForm .privacyPolicy {
     width: 100%                !important;
     text-align: left           !important;
     margin-bottom: 1rem        !important;
+    box-sizing: border-box     !important;
   }
-
-  /* And the “expand questionnaire” links under the form */
   #applyForm ul.questionnairesLinks {
     float: none                !important;
     width: 100%                !important;
     margin: 1rem 0 0 0         !important;
     padding: 0                 !important;
     list-style: none           !important;
+    box-sizing: border-box     !important;
   }
   #applyForm ul.questionnairesLinks li {
     margin: 0                  !important;
@@ -102,7 +100,7 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 4) On mobile (≤767px), revert everything to full-width                   */
+/* 4) MOBILE RESET (ALL ≤767px BACK TO FULL WIDTH)                           */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 767px) {
   #applyForm .form-group > [class*="col-"],
@@ -127,25 +125,6 @@
     padding: 0                 !important;
     box-sizing: border-box     !important;
   }
-}
-
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* 5) Ensure the Comeet dropdowns/select-toggles also go full-width          */
-/* ─────────────────────────────────────────────────────────────────────────── */
-@media (min-width: 768px) {
-  /* the “Choose” toggle in each questionnaire field */
-  #applyForm .dropdown.left .dropdown-toggle {
-    display: block             !important;
-    width: 100%                !important;
-    box-sizing: border-box     !important;
-  }
-  /* and when the menu drops down, make it full width, too */
-  #applyForm .dropdown.left .dropdown-menu {
-    width: 100%                !important;
-    box-sizing: border-box     !important;
-  }
-}
-@media (max-width: 767px) {
   #applyForm .dropdown.left .dropdown-toggle,
   #applyForm .dropdown.left .dropdown-menu {
     display: block             !important;
@@ -155,35 +134,40 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 6) EXTEND ONLY THE TOP-OF-FORM INPUT WRAPPERS 25% WIDER                   */
+/* 5) DROPDOWNS / SELECTs FULL-WIDTH                                          */
 /* ─────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  /* targets the right‐hand side wrapper (.col-sm-9) for each top-level form-group */
-  #applyForm .form-group:not(.form-group-questionnaires) > .col-xs-12.col-sm-9 {
-    width: 125%               !important;
-    box-sizing: border-box    !important;
+  #applyForm .dropdown.left .dropdown-toggle {
+    display: block             !important;
+    width: 100%                !important;
+    box-sizing: border-box     !important;
+  }
+  #applyForm .dropdown.left .dropdown-menu {
+    width: 100%                !important;
+    box-sizing: border-box     !important;
   }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/* 0) RELEASE THE WEBFLOW CONTAINER SO OUR EMBED CAN OVERFLOW                */
+/* 6) RELEASE WEBFLOW’S CONTAINER & LET IFRAME SPILL                        */
 /* ─────────────────────────────────────────────────────────────────────────── */
+/* remove Webflow’s fixed container constraints so overflow can show */
 .careers-page .w-container,
 .jobs-referral-code-embed {
-  /* remove width limits & padding */
   max-width: none       !important;
   width:     100%       !important;
-  padding:   0          !important;
-  overflow-x:visible    !important;
+  padding-left: 0       !important;
+  padding-right: 0      !important;
+  overflow-x: visible   !important;
 }
-
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* 1) NOW LET THE IFRAME ITSELF GO 125% WIDE, FLUSH LEFT, SPILL RIGHT         */
-/* ─────────────────────────────────────────────────────────────────────────── */
+/* if your theme uses section to clip overflow */
+.careers-page section {
+  overflow-x: visible   !important;
+}
+/* make the iframe itself 125% so it overhangs 25% on the right */
 .jobs-referral-code-embed iframe.comeet-iframe {
   width:      125%      !important;
-  min-width: 125%      !important;
-  margin:    0         !important;  /* keep it flush on the left */
-  overflow: visible    !important;
+  min-width:  125%      !important;
+  margin:     0         !important;
+  overflow:   visible   !important;
 }
-
